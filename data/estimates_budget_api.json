@@ -1,0 +1,3913 @@
+{
+  "data": [
+    {
+      "project_id": "B2100",
+      "line_items": [
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 859466.64,
+          "current_estimate": 972734.6
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 759871.17,
+          "current_estimate": 705049.67
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 500431.34,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 353411.18,
+          "current_estimate": 405676.85
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 352341.79,
+          "current_estimate": 382904.72
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 625900.27,
+          "current_estimate": 589843.34
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 856827.31,
+          "current_estimate": 843324.46
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 845277.43,
+          "current_estimate": 1127097.41
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 147680.04,
+          "current_estimate": 151734.06
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 493790.19,
+          "current_estimate": 586123.75
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 275599.45,
+          "current_estimate": 306190.28
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 163469.33,
+          "current_estimate": 150296.51
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 567866.4,
+          "current_estimate": 568546.46
+        }
+      ]
+    },
+    {
+      "project_id": "B2101",
+      "line_items": [
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 1301871.95,
+          "current_estimate": 1171145.99
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 1133227.28,
+          "current_estimate": 1489216.99
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 1036075.76,
+          "current_estimate": 904296.02
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 544268.93,
+          "current_estimate": 655187.6
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 1958930.65,
+          "current_estimate": 2202408.65
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 1998074.55,
+          "current_estimate": 2295014.27
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 2386803.16,
+          "current_estimate": 2676427.63
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 2479797.25,
+          "current_estimate": 2301223.04
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 2302563.09,
+          "current_estimate": 2809795.23
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 3130504.2,
+          "current_estimate": 3267208.88
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 1245477.64,
+          "current_estimate": 1100922.04
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 997903.34,
+          "current_estimate": 1092319.57
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 2017276.57,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 2414305.48,
+          "current_estimate": 3204913.9
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 3122139.24,
+          "current_estimate": 3398467.97
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 2014057.03,
+          "current_estimate": 2358238.52
+        }
+      ]
+    },
+    {
+      "project_id": "B2102",
+      "line_items": [
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 1629421.07,
+          "current_estimate": 1595679.13
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 3026737.39,
+          "current_estimate": 2906668.65
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 1130835.36,
+          "current_estimate": 1178624.97
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 2677792.6,
+          "current_estimate": 2283348.11
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 2143768.09,
+          "current_estimate": 2305421.74
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 2003390.76,
+          "current_estimate": 2355437.2
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 2692154.53,
+          "current_estimate": 2949175.8
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 2709362.28,
+          "current_estimate": 2802102.74
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 877852.85,
+          "current_estimate": 910430.35
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 2724088.73,
+          "current_estimate": 3072950.99
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 2480452.9,
+          "current_estimate": 3114637.33
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 2713354.51,
+          "current_estimate": 2642773.37
+        }
+      ]
+    },
+    {
+      "project_id": "B2103",
+      "line_items": [
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 445573.87,
+          "current_estimate": 393649.16
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 1143755.02,
+          "current_estimate": 1379046.77
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 440462.98,
+          "current_estimate": 575442.72
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 954596.65,
+          "current_estimate": 1109815.68
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 955009.43,
+          "current_estimate": 1144403.88
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 207097.84,
+          "current_estimate": 202973.09
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 682642.36,
+          "current_estimate": 897664.17
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 719759.57,
+          "current_estimate": 715089.1
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 220726.88,
+          "current_estimate": 288783.84
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 513222.84,
+          "current_estimate": 458724.9
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 1027309.94,
+          "current_estimate": 1239996.26
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 248122.75,
+          "current_estimate": 228684.48
+        }
+      ]
+    },
+    {
+      "project_id": "B2104",
+      "line_items": [
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 735495.19,
+          "current_estimate": 812100.32
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 1123657.85,
+          "current_estimate": 1456238.37
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 1094871.15,
+          "current_estimate": 1243176.26
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 1994826.41,
+          "current_estimate": 2691077.94
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1199900.19,
+          "current_estimate": 1605187.81
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 1285699.01,
+          "current_estimate": 1682082.22
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 1184105.79,
+          "current_estimate": 1542110.14
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 2054794.97,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 1758970.33,
+          "current_estimate": 1986295.26
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 2217252.99,
+          "current_estimate": 2251081.62
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 2314646.08,
+          "current_estimate": 2836827.58
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 590245.26,
+          "current_estimate": 578452.37
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 1824791.14,
+          "current_estimate": 1809957.26
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 1642236.55,
+          "current_estimate": 2060400.56
+        }
+      ]
+    },
+    {
+      "project_id": "B2105",
+      "line_items": [
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 780420.12,
+          "current_estimate": 793119.94
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 493092.03,
+          "current_estimate": 422783.67
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 574694.76,
+          "current_estimate": 609697.57
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 788907.53,
+          "current_estimate": 998311.7
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 614125.32,
+          "current_estimate": 673266.71
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 270281.54,
+          "current_estimate": 360057.84
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 128926.79,
+          "current_estimate": 127298.27
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 386378.94,
+          "current_estimate": 513398.03
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 625908.78,
+          "current_estimate": 556451.69
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 742380.73,
+          "current_estimate": 780700.97
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 615768.33,
+          "current_estimate": 749596.41
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 220004.34,
+          "current_estimate": 240212.81
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 616451.67,
+          "current_estimate": 550839.99
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 597921.24,
+          "current_estimate": 590034.99
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 582125.01,
+          "current_estimate": 770991.05
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 637926.01,
+          "current_estimate": 550350.5
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 183921.52,
+          "current_estimate": 185243.94
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 331298.67,
+          "current_estimate": 302304.8
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 314462.47,
+          "current_estimate": 366643.8
+        }
+      ]
+    },
+    {
+      "project_id": "B2106",
+      "line_items": [
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 2902290.49,
+          "current_estimate": 3039306.36
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 2085275.92,
+          "current_estimate": 2712172.96
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 3260252.51,
+          "current_estimate": 3155481.61
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 3487023.52,
+          "current_estimate": 4226640.57
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 3876095.44,
+          "current_estimate": 3849051.18
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1701976.45,
+          "current_estimate": 1892654.58
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 2926998.64,
+          "current_estimate": 3237278.93
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 4333949.4,
+          "current_estimate": 4607250.91
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 3526950.15,
+          "current_estimate": 3891610.06
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 4922903.92,
+          "current_estimate": 5576715.49
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 5394884.84,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 4173134.61,
+          "current_estimate": 4379007.86
+        }
+      ]
+    },
+    {
+      "project_id": "B2107",
+      "line_items": [
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 4220300.99,
+          "current_estimate": 3661398.8
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1702645.37,
+          "current_estimate": 1871650.98
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 2978987.94,
+          "current_estimate": 3936635.5
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 3332081.8,
+          "current_estimate": 4035654.54
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 4169656.59,
+          "current_estimate": 3816477.69
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 2515723.65,
+          "current_estimate": 3151215.81
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 1382515.67,
+          "current_estimate": 1447875.64
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 3086880.74,
+          "current_estimate": 3215786.12
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 2867626.98,
+          "current_estimate": 2589522.37
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 2228701.28,
+          "current_estimate": 2799266.63
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 1020568.14,
+          "current_estimate": 1112301.13
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 4159499.76,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 4091140.12,
+          "current_estimate": 4514534.78
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 3365994.92,
+          "current_estimate": 3004255.47
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 1858393.23,
+          "current_estimate": 1764265.28
+        }
+      ]
+    },
+    {
+      "project_id": "B2108",
+      "line_items": [
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 1100683.55,
+          "current_estimate": 961621.35
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 942586.61,
+          "current_estimate": 811675.97
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 4598150.26,
+          "current_estimate": 5015185.51
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 3560072.9,
+          "current_estimate": 3234811.06
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 4102187.41,
+          "current_estimate": 3560417.63
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 1811494.33,
+          "current_estimate": 1891644.43
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 1582574.01,
+          "current_estimate": 1701379.06
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 2068963.01,
+          "current_estimate": 2450358.62
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 1923301.78,
+          "current_estimate": 1903343.67
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 3861691.52,
+          "current_estimate": 3934808.28
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 1124933.64,
+          "current_estimate": 1338604.87
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 4389068.39,
+          "current_estimate": 4208979.57
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 743527.28,
+          "current_estimate": 972387.14
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 2883127.23,
+          "current_estimate": 2906975.43
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 1720110.81,
+          "current_estimate": 2262434.94
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 3285888.38,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 2716320.13,
+          "current_estimate": 2899308.54
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 2108277.65,
+          "current_estimate": 2672636.65
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 3047928.23,
+          "current_estimate": 3344150.33
+        }
+      ]
+    },
+    {
+      "project_id": "B2109",
+      "line_items": [
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 432507.31,
+          "current_estimate": 539382.85
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 278605.21,
+          "current_estimate": 328723.45
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 197948.56,
+          "current_estimate": 266256.83
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 332630.97,
+          "current_estimate": 320806.48
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 291691.68,
+          "current_estimate": 284711.74
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 544011.41,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 305816.7,
+          "current_estimate": 377497.11
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 410811.47,
+          "current_estimate": 421710.49
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 192304.77,
+          "current_estimate": 248909.33
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 359473.83,
+          "current_estimate": 377150.14
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 547856.7,
+          "current_estimate": 568555.03
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 570208.61,
+          "current_estimate": 767306.17
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 451863.25,
+          "current_estimate": 488231.93
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 173124.17,
+          "current_estimate": 160499.43
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 397802.22,
+          "current_estimate": 431823.9
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 203745.63,
+          "current_estimate": 178558.14
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 247989.98,
+          "current_estimate": 282421.04
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 112621.98,
+          "current_estimate": 122504.86
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 426444.46,
+          "current_estimate": 486793.87
+        }
+      ]
+    },
+    {
+      "project_id": "B2110",
+      "line_items": [
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 1473386.07,
+          "current_estimate": 1676651.73
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 631530.74,
+          "current_estimate": 622511.89
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 1768195.15,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 3283973.29,
+          "current_estimate": 4417457.73
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 3123453.5,
+          "current_estimate": 2778420.35
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 1552765.71,
+          "current_estimate": 1766087.98
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 1005129.76,
+          "current_estimate": 996489.98
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 3451316.53,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 1476489.57,
+          "current_estimate": 1569199.95
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 1421762.97,
+          "current_estimate": 1871196.64
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 2123284.58,
+          "current_estimate": 2493593.88
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 2595789.31,
+          "current_estimate": 2558621.86
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 1554069.65,
+          "current_estimate": 1492962.19
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 1565592.65,
+          "current_estimate": 1915589.18
+        }
+      ]
+    },
+    {
+      "project_id": "B2111",
+      "line_items": [
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 1663947.65,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 3065890.68,
+          "current_estimate": 2716937.47
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 4923699.45,
+          "current_estimate": 6408796.32
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 4695580.91,
+          "current_estimate": 4361537.65
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 2328621.11,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 2004834.23,
+          "current_estimate": 2516115.7
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 2120071.86,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 4028346.72,
+          "current_estimate": 4025318.27
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 2651895.11,
+          "current_estimate": 2547946.9
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 953671.48,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 4567431.65,
+          "current_estimate": 5564510.63
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 1239956.83,
+          "current_estimate": 1654471.22
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 3346243.75,
+          "current_estimate": 4483839.97
+        }
+      ]
+    },
+    {
+      "project_id": "B2112",
+      "line_items": [
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 5186860.94,
+          "current_estimate": 4848304.21
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 1465711.18,
+          "current_estimate": 1269684.59
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 3479835.06,
+          "current_estimate": 4167872.44
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 4331968.48,
+          "current_estimate": 5179544.31
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 2429535.09,
+          "current_estimate": 2323233.18
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 4843020.59,
+          "current_estimate": 5535075.3
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 1304280.97,
+          "current_estimate": 1711069.93
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 1494036.62,
+          "current_estimate": 1389022.54
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 3042331.21,
+          "current_estimate": 3496406.26
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 1229629.25,
+          "current_estimate": 1464356.29
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 2151790.03,
+          "current_estimate": 2691948.18
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 2414500.72,
+          "current_estimate": 3032330.71
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 3544083.14,
+          "current_estimate": 4493442.77
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 2448828.86,
+          "current_estimate": 2645335.8
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 5027886.12,
+          "current_estimate": 4975420.13
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 2864384.42,
+          "current_estimate": 3829441.97
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 5074837.29,
+          "current_estimate": 5157419.43
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 3670062.35,
+          "current_estimate": 4035378.38
+        }
+      ]
+    },
+    {
+      "project_id": "B2113",
+      "line_items": [
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 2003294.52,
+          "current_estimate": 2653871.38
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 2386194.01,
+          "current_estimate": 2617498.48
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 959508.22,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 2407635.65,
+          "current_estimate": 3054974.78
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 2154570.16,
+          "current_estimate": 1910241.12
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 1731270.56,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 2375422.78,
+          "current_estimate": 2557571.44
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 1628942.05,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 1385072.47,
+          "current_estimate": 1279500.49
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 1102693.42,
+          "current_estimate": 1253912.35
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 447786.76,
+          "current_estimate": 595242.73
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 1911719.18,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 1865358.9,
+          "current_estimate": 2287252.69
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 1061014.87,
+          "current_estimate": 909412.99
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 1949707.52,
+          "current_estimate": 1975281.55
+        }
+      ]
+    },
+    {
+      "project_id": "B2114",
+      "line_items": [
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 1046177.05,
+          "current_estimate": 1404447.64
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 3110220.52,
+          "current_estimate": 3683534.87
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 3512210.17,
+          "current_estimate": 4587595.07
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 3463950.63,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 3453480.12,
+          "current_estimate": 4462363.84
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 4078581.25,
+          "current_estimate": 3685660.72
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1087872.48,
+          "current_estimate": 1305661.09
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 2943768.19,
+          "current_estimate": 2823622.43
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 1727560.51,
+          "current_estimate": 2035603.36
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 3575800.77,
+          "current_estimate": 4335907.03
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 3671753.27,
+          "current_estimate": 4939304.34
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 3795936.74,
+          "current_estimate": 3787079.86
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 1746646.52,
+          "current_estimate": 2355930.19
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 704445.37,
+          "current_estimate": 786995.16
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 2370260.53,
+          "current_estimate": 2823371.03
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 801130.98,
+          "current_estimate": 1038636.43
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 1931371.33,
+          "current_estimate": 2527519.1
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 1632688.67,
+          "current_estimate": 2001400.71
+        }
+      ]
+    },
+    {
+      "project_id": "B2116",
+      "line_items": [
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 1198872.98,
+          "current_estimate": 1251948.7
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 1369029.05,
+          "current_estimate": 1526483.2
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 517211.74,
+          "current_estimate": 695145.08
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 2379019.64,
+          "current_estimate": 2987616.85
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 1840463.0,
+          "current_estimate": 1865488.14
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 612663.13,
+          "current_estimate": 822799.69
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 1492837.11,
+          "current_estimate": 1739653.25
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 655288.88,
+          "current_estimate": 661761.37
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 2398079.41,
+          "current_estimate": 2342066.73
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 2412134.0,
+          "current_estimate": 2181647.81
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 1059575.93,
+          "current_estimate": 1188282.92
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 1840355.69,
+          "current_estimate": 1603937.96
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 2123138.0,
+          "current_estimate": 2730343.43
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 1202308.72,
+          "current_estimate": 1342121.68
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 695868.55,
+          "current_estimate": 629938.19
+        }
+      ]
+    },
+    {
+      "project_id": "B2117",
+      "line_items": [
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 748256.78,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 156759.13,
+          "current_estimate": 158409.54
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 700260.46,
+          "current_estimate": 721358.37
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 754521.54,
+          "current_estimate": 866944.2
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 276384.07,
+          "current_estimate": 285112.01
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 706473.51,
+          "current_estimate": 894562.81
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 450357.19,
+          "current_estimate": 546795.24
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 521245.45,
+          "current_estimate": 618449.06
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 760574.41,
+          "current_estimate": 723321.26
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 669172.16,
+          "current_estimate": 696788.17
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 177377.48,
+          "current_estimate": 173874.58
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 170010.21,
+          "current_estimate": 173013.99
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 773087.65,
+          "current_estimate": 1020516.03
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 367995.32,
+          "current_estimate": 350635.38
+        }
+      ]
+    },
+    {
+      "project_id": "B2118",
+      "line_items": [
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 1987326.4,
+          "current_estimate": 2414534.28
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 817233.02,
+          "current_estimate": 777236.8
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 3111554.22,
+          "current_estimate": 3250472.82
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 1878884.79,
+          "current_estimate": 2173658.43
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 1431700.34,
+          "current_estimate": 1467121.71
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 1263209.36,
+          "current_estimate": 1319853.62
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 2729659.29,
+          "current_estimate": 2916502.4
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 3352462.73,
+          "current_estimate": 4340429.21
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 2666231.6,
+          "current_estimate": 3449685.6
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 3236353.62,
+          "current_estimate": 4331885.77
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 1957258.25,
+          "current_estimate": 2445119.83
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 2036136.65,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 943870.39,
+          "current_estimate": 1103575.05
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 796331.58,
+          "current_estimate": 714943.74
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 1291892.81,
+          "current_estimate": 1153927.69
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 679801.82,
+          "current_estimate": 661012.15
+        }
+      ]
+    },
+    {
+      "project_id": "B2119",
+      "line_items": [
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 247227.33,
+          "current_estimate": 264647.29
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 201489.1,
+          "current_estimate": 204121.05
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 831657.09,
+          "current_estimate": 916822.1
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 910009.63,
+          "current_estimate": 851685.25
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 331244.06,
+          "current_estimate": 282251.98
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 869402.07,
+          "current_estimate": 970226.75
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 312721.32,
+          "current_estimate": 324708.17
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 943987.58,
+          "current_estimate": 1256502.79
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 485205.49,
+          "current_estimate": 432479.41
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 816518.33,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 257585.97,
+          "current_estimate": 265217.03
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 354417.73,
+          "current_estimate": 411221.97
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 457753.71,
+          "current_estimate": 569754.56
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1091455.91,
+          "current_estimate": 1040907.48
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 528338.06,
+          "current_estimate": 577429.18
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 195868.3,
+          "current_estimate": 185356.75
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 733308.1,
+          "current_estimate": 920805.14
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 292001.42,
+          "current_estimate": 299379.31
+        }
+      ]
+    },
+    {
+      "project_id": "B2120",
+      "line_items": [
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 1373974.61,
+          "current_estimate": 1499829.36
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 1230960.74,
+          "current_estimate": 1483268.41
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 943719.2,
+          "current_estimate": 1031119.32
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 755237.41,
+          "current_estimate": 644577.4
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 1212844.8,
+          "current_estimate": 1294857.65
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 1332557.35,
+          "current_estimate": 1594237.73
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 970497.5,
+          "current_estimate": 915048.24
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 544528.79,
+          "current_estimate": 652104.2
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 1247209.41,
+          "current_estimate": 1548672.78
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 1349913.42,
+          "current_estimate": 1500165.03
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 1375996.22,
+          "current_estimate": 1596917.77
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 1217980.69,
+          "current_estimate": 1197823.89
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1249579.31,
+          "current_estimate": 1331426.57
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 1202875.69,
+          "current_estimate": 1321997.37
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 785711.83,
+          "current_estimate": 1031669.51
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 1410661.19,
+          "current_estimate": 1554756.49
+        }
+      ]
+    },
+    {
+      "project_id": "B2121",
+      "line_items": [
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 3192198.63,
+          "current_estimate": 3766847.93
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 1015122.94,
+          "current_estimate": 1218694.6
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 1563773.3,
+          "current_estimate": 1760112.14
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 3501930.57,
+          "current_estimate": 4318416.81
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 3577012.56,
+          "current_estimate": 3556121.97
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 1736196.31,
+          "current_estimate": 2202606.22
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 3748953.39,
+          "current_estimate": 3823308.77
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 5617178.6,
+          "current_estimate": 7320279.39
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 3578578.97,
+          "current_estimate": 3464784.25
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 2353195.38,
+          "current_estimate": 2509863.08
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 5016455.82,
+          "current_estimate": 6594442.03
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 1409357.06,
+          "current_estimate": 1250560.87
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 3267119.02,
+          "current_estimate": 3452235.97
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 2606836.25,
+          "current_estimate": 2326093.72
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 4880444.56,
+          "current_estimate": 4473235.25
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 1542780.79,
+          "current_estimate": 2080648.98
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 1055468.87,
+          "current_estimate": 1344031.1
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 1724425.47,
+          "current_estimate": 1927847.82
+        }
+      ]
+    },
+    {
+      "project_id": "B2122",
+      "line_items": [
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 543096.02,
+          "current_estimate": 666719.96
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 2900482.8,
+          "current_estimate": 3306842.08
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 1684981.98,
+          "current_estimate": 2024132.3
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 2818308.47,
+          "current_estimate": 2523275.8
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 1644815.75,
+          "current_estimate": 1599033.83
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 1150999.05,
+          "current_estimate": 1244730.69
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 2531418.76,
+          "current_estimate": 2599758.87
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 1634424.73,
+          "current_estimate": 1724741.29
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 861922.98,
+          "current_estimate": 781193.32
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 2155541.8,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 2716099.08,
+          "current_estimate": 2310931.32
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 1836339.89,
+          "current_estimate": 1920430.9
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1899551.02,
+          "current_estimate": 2066942.96
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 1876666.17,
+          "current_estimate": 2199211.08
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 2054608.12,
+          "current_estimate": 2683658.94
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 1036789.61,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 787275.87,
+          "current_estimate": 808023.83
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 2115020.62,
+          "current_estimate": 1834436.68
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 1152974.07,
+          "current_estimate": 1397651.77
+        }
+      ]
+    },
+    {
+      "project_id": "B2123",
+      "line_items": [
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 2567337.27,
+          "current_estimate": 3267918.13
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 2016196.58,
+          "current_estimate": 1874657.59
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 3340411.58,
+          "current_estimate": 3976339.47
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 1706108.88,
+          "current_estimate": 2019237.21
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 2612806.91,
+          "current_estimate": 2412695.97
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 2491252.67,
+          "current_estimate": 3103435.33
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 2493097.03,
+          "current_estimate": 2174273.73
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 1073854.38,
+          "current_estimate": 1387593.32
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 2523751.7,
+          "current_estimate": 2693752.7
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 2647038.09,
+          "current_estimate": 2515335.73
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 2004113.94,
+          "current_estimate": 2502559.57
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 1543631.83,
+          "current_estimate": 1521237.47
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 2304335.15,
+          "current_estimate": 2491325.05
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 1175221.18,
+          "current_estimate": 1580394.97
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 553502.88,
+          "current_estimate": 737124.37
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 2003015.09,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 3071295.25,
+          "current_estimate": 2943564.39
+        }
+      ]
+    },
+    {
+      "project_id": "C2124",
+      "line_items": [
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 1163983.91,
+          "current_estimate": 1269986.39
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 392115.41,
+          "current_estimate": 514751.82
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 491769.37,
+          "current_estimate": 567081.87
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 2091570.51,
+          "current_estimate": 1798235.14
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 1896746.91,
+          "current_estimate": 2380375.06
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 1446883.3,
+          "current_estimate": 1934509.33
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 621592.05,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 1231667.62,
+          "current_estimate": 1319992.49
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 2245499.35,
+          "current_estimate": 2042700.82
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 673237.36,
+          "current_estimate": 656927.0
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 614030.32,
+          "current_estimate": 576654.94
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 382084.75,
+          "current_estimate": 387419.98
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 1025041.36,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 1769580.37,
+          "current_estimate": 2066893.17
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 2018980.87,
+          "current_estimate": 2691992.95
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 1028970.59,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 2337580.2,
+          "current_estimate": 2493488.81
+        }
+      ]
+    },
+    {
+      "project_id": "C2125",
+      "line_items": [
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 622671.18,
+          "current_estimate": 657231.72
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 518767.1,
+          "current_estimate": 462444.06
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 727033.32,
+          "current_estimate": 775118.63
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 638078.47,
+          "current_estimate": 703847.83
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 354891.13,
+          "current_estimate": 439659.19
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 252708.83,
+          "current_estimate": 251363.33
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 570310.69,
+          "current_estimate": 632074.01
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 219181.0,
+          "current_estimate": 225244.75
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 974986.37,
+          "current_estimate": 908344.09
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 941406.35,
+          "current_estimate": 898247.04
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 706928.05,
+          "current_estimate": 730136.77
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 250669.16,
+          "current_estimate": 222809.63
+        }
+      ]
+    },
+    {
+      "project_id": "C2126",
+      "line_items": [
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 4475602.51,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 2151361.67,
+          "current_estimate": 2190837.66
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 925153.99,
+          "current_estimate": 879086.6
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 1301207.78,
+          "current_estimate": 1407118.3
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 4833851.52,
+          "current_estimate": 5046329.85
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 1724310.47,
+          "current_estimate": 2228626.35
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 2690697.46,
+          "current_estimate": 3299370.4
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 1414598.86,
+          "current_estimate": 1393500.14
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 1393120.71,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 3992999.29,
+          "current_estimate": 5227160.35
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 3677093.49,
+          "current_estimate": 3606967.39
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 4050127.86,
+          "current_estimate": 4428871.19
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 5451196.54,
+          "current_estimate": 7309271.23
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 2340560.65,
+          "current_estimate": 2146513.53
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 3671277.84,
+          "current_estimate": 4421834.2
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 2259867.83,
+          "current_estimate": 2942642.15
+        }
+      ]
+    },
+    {
+      "project_id": "C2127",
+      "line_items": [
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 5222293.72,
+          "current_estimate": 6548596.25
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 4139918.78,
+          "current_estimate": 4289289.1
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 5250590.05,
+          "current_estimate": 5352500.33
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 4988099.18,
+          "current_estimate": 6164119.91
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 3623960.98,
+          "current_estimate": 3186749.22
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 1641567.14,
+          "current_estimate": 2039356.08
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 1416277.6,
+          "current_estimate": 1614866.49
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 2743370.87,
+          "current_estimate": 3317170.19
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 4464897.07,
+          "current_estimate": 5753458.1
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 1464658.8,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 5454893.64,
+          "current_estimate": 6422757.35
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 1629002.6,
+          "current_estimate": 1658358.44
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 4347376.43,
+          "current_estimate": 5462991.51
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 2542832.64,
+          "current_estimate": 2526373.46
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 4722072.71,
+          "current_estimate": 5332579.55
+        }
+      ]
+    },
+    {
+      "project_id": "C2128",
+      "line_items": [
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 560981.89,
+          "current_estimate": 496912.48
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 687069.14,
+          "current_estimate": 663804.94
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 1244207.7,
+          "current_estimate": 1482667.31
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 513351.05,
+          "current_estimate": 445296.38
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1015944.4,
+          "current_estimate": 1098963.0
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 279727.86,
+          "current_estimate": 315972.69
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 1314550.54,
+          "current_estimate": 1476915.11
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 877242.82,
+          "current_estimate": 1106105.89
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 918926.95,
+          "current_estimate": 1011678.91
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 685455.82,
+          "current_estimate": 709127.5
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 223240.46,
+          "current_estimate": 222223.12
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 766721.58,
+          "current_estimate": 946929.92
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 1067462.02,
+          "current_estimate": 1022107.88
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 781017.69,
+          "current_estimate": 995521.47
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 785283.48,
+          "current_estimate": 765803.71
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 1017662.98,
+          "current_estimate": 915086.18
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 931144.2,
+          "current_estimate": 1097912.6
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 1144975.19,
+          "current_estimate": 1250821.56
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 835206.06,
+          "current_estimate": 1096922.59
+        }
+      ]
+    },
+    {
+      "project_id": "C2129",
+      "line_items": [
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 1089630.9,
+          "current_estimate": 1268759.71
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 1697194.66,
+          "current_estimate": 2213999.09
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 2213474.44,
+          "current_estimate": 2662626.16
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 498666.85,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 2104849.18,
+          "current_estimate": 2147959.79
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 1113632.24,
+          "current_estimate": 1434917.95
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 695919.91,
+          "current_estimate": 728557.42
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 1962540.86,
+          "current_estimate": 2584109.29
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 1193464.3,
+          "current_estimate": 1238568.88
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 1419431.5,
+          "current_estimate": 1749605.59
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 1841443.02,
+          "current_estimate": 2000172.93
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 514525.61,
+          "current_estimate": 600835.59
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 2045925.82,
+          "current_estimate": 2454711.4
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 644350.65,
+          "current_estimate": 798123.46
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 947206.37,
+          "current_estimate": 916759.94
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 1681673.46,
+          "current_estimate": 2244471.19
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 1295955.89,
+          "current_estimate": 1105672.01
+        }
+      ]
+    },
+    {
+      "project_id": "C2131",
+      "line_items": [
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 475353.32,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 505477.92,
+          "current_estimate": 527011.28
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 821917.19,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 340213.49,
+          "current_estimate": 337126.3
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 490845.34,
+          "current_estimate": 491516.86
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1096911.44,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 503128.59,
+          "current_estimate": 498915.32
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 642960.24,
+          "current_estimate": 558361.02
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 567059.31,
+          "current_estimate": 641704.11
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 680844.67,
+          "current_estimate": 685820.22
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 639576.83,
+          "current_estimate": 724884.28
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 937661.65,
+          "current_estimate": 933780.67
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 333844.25,
+          "current_estimate": 331385.57
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 686434.19,
+          "current_estimate": 809315.03
+        }
+      ]
+    },
+    {
+      "project_id": "C2132",
+      "line_items": [
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 3078317.56,
+          "current_estimate": 3951754.56
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 4078750.63,
+          "current_estimate": 4394091.25
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 2661720.0,
+          "current_estimate": 3319813.79
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 1703269.33,
+          "current_estimate": 1499939.18
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 1805435.3,
+          "current_estimate": 1547313.25
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 1629339.8,
+          "current_estimate": 1860594.87
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 3972818.28,
+          "current_estimate": 4813017.06
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 4415673.38,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 763603.65,
+          "current_estimate": 807245.56
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 2277104.43,
+          "current_estimate": 2628254.8
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 3413389.15,
+          "current_estimate": 3824418.29
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 3352855.34,
+          "current_estimate": 3288663.27
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 3234373.08,
+          "current_estimate": 3591570.64
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 2337246.97,
+          "current_estimate": 2585928.82
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 2320155.6,
+          "current_estimate": 2586150.56
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 860156.22,
+          "current_estimate": 1033505.45
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 1714751.18,
+          "current_estimate": 1726645.38
+        }
+      ]
+    },
+    {
+      "project_id": "C2133",
+      "line_items": [
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 1058005.72,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 322568.63,
+          "current_estimate": 390636.23
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 395719.56,
+          "current_estimate": 392689.37
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 808556.17,
+          "current_estimate": 952201.61
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 187358.55,
+          "current_estimate": 173637.96
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 670872.09,
+          "current_estimate": 800078.44
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 940136.24,
+          "current_estimate": 901631.8
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 1043781.31,
+          "current_estimate": 913857.62
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 726764.16,
+          "current_estimate": 789922.0
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 780150.85,
+          "current_estimate": 694245.61
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 943388.72,
+          "current_estimate": 812052.03
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 402470.17,
+          "current_estimate": 509005.96
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 340727.16,
+          "current_estimate": 309210.85
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 252952.84,
+          "current_estimate": 292106.93
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 457598.73,
+          "current_estimate": 500735.47
+        }
+      ]
+    },
+    {
+      "project_id": "C2134",
+      "line_items": [
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 955037.43,
+          "current_estimate": 876145.84
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 456417.53,
+          "current_estimate": 537958.19
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 866842.9,
+          "current_estimate": 747073.44
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 1257106.13,
+          "current_estimate": 1423898.65
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 795635.35,
+          "current_estimate": 828553.78
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 1122708.22,
+          "current_estimate": 1148134.33
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 1385120.29,
+          "current_estimate": 1651242.28
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 1124610.63,
+          "current_estimate": 1269967.96
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 240893.26,
+          "current_estimate": 288264.17
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 1148947.35,
+          "current_estimate": 1435452.11
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 806043.81,
+          "current_estimate": 1032492.48
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 1027832.4,
+          "current_estimate": 927129.0
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 749529.05,
+          "current_estimate": 758453.65
+        }
+      ]
+    },
+    {
+      "project_id": "C2135",
+      "line_items": [
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 2390753.06,
+          "current_estimate": 2514292.42
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 4118399.67,
+          "current_estimate": 4445223.29
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 1316378.62,
+          "current_estimate": 1364564.9
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 5247298.45,
+          "current_estimate": 6236997.48
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 3890080.17,
+          "current_estimate": 3618348.8
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 1582464.61,
+          "current_estimate": 1378441.42
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 5367887.07,
+          "current_estimate": 4870770.82
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 3456298.26,
+          "current_estimate": 3012152.14
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 3083954.22,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 2297862.22,
+          "current_estimate": 2477908.51
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 5161478.18,
+          "current_estimate": 6256195.43
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 4217173.52,
+          "current_estimate": 3796766.3
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 1897455.92,
+          "current_estimate": 2285971.65
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1803961.48,
+          "current_estimate": 1762908.88
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 1489179.24,
+          "current_estimate": 1648450.2
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 4458846.23,
+          "current_estimate": 5666257.48
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 5262814.73,
+          "current_estimate": 4844713.94
+        }
+      ]
+    },
+    {
+      "project_id": "C2136",
+      "line_items": [
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 1572876.98,
+          "current_estimate": 1404562.12
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 1838439.25,
+          "current_estimate": 1926231.87
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1632728.76,
+          "current_estimate": 1472510.14
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 856490.09,
+          "current_estimate": 732272.76
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 961706.95,
+          "current_estimate": 943609.53
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 451897.83,
+          "current_estimate": 580298.08
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 1145967.39,
+          "current_estimate": 1377384.94
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 1515789.4,
+          "current_estimate": 1751462.83
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 1329766.21,
+          "current_estimate": 1618648.71
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 489684.72,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 1089697.13,
+          "current_estimate": 1013467.36
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 1054891.96,
+          "current_estimate": 1355818.17
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 1077198.72,
+          "current_estimate": 1418360.5
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 1446918.89,
+          "current_estimate": 1260123.55
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 458423.0,
+          "current_estimate": 403256.48
+        }
+      ]
+    },
+    {
+      "project_id": "C2137",
+      "line_items": [
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 360509.0,
+          "current_estimate": 446367.65
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 384883.18,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 953464.38,
+          "current_estimate": 1074755.37
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 320737.32,
+          "current_estimate": 391796.51
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 983271.29,
+          "current_estimate": 1054187.44
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 959175.76,
+          "current_estimate": 1198879.94
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 666648.0,
+          "current_estimate": 766197.12
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 908035.09,
+          "current_estimate": 1044428.22
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 473448.29,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 692328.03,
+          "current_estimate": 910974.9
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 904420.62,
+          "current_estimate": 1147305.98
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 548277.17,
+          "current_estimate": 709317.77
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 374791.15,
+          "current_estimate": 430624.39
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 1032524.75,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 269079.73,
+          "current_estimate": 290535.79
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 1010656.66,
+          "current_estimate": 1249130.36
+        }
+      ]
+    },
+    {
+      "project_id": "C2138",
+      "line_items": [
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 1152430.83,
+          "current_estimate": 1125942.93
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 1031031.44,
+          "current_estimate": 1003009.73
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 2339857.08,
+          "current_estimate": 3022769.91
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 545582.48,
+          "current_estimate": 695164.17
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 1833024.32,
+          "current_estimate": 1726480.3
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1823948.47,
+          "current_estimate": 1808734.32
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 2266372.6,
+          "current_estimate": 2988501.92
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 2482196.42,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 2828601.55,
+          "current_estimate": 2820001.21
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 958273.95,
+          "current_estimate": 868703.47
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 1299615.72,
+          "current_estimate": 1122133.51
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 987867.74,
+          "current_estimate": 857203.9
+        }
+      ]
+    },
+    {
+      "project_id": "C2139",
+      "line_items": [
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 684824.67,
+          "current_estimate": 629644.07
+        },
+        {
+          "cost_code": "3100",
+          "description": "Concrete Formwork",
+          "original_estimate": 358369.38,
+          "current_estimate": 343065.71
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 469845.41,
+          "current_estimate": 493638.77
+        },
+        {
+          "cost_code": "2200",
+          "description": "Earthwork",
+          "original_estimate": 1314628.0,
+          "current_estimate": 1366602.42
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 1486518.32,
+          "current_estimate": 1906186.64
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 320459.33,
+          "current_estimate": 292494.52
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 1224728.29,
+          "current_estimate": 1153185.7
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 642885.32,
+          "current_estimate": 851650.58
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 1323983.48,
+          "current_estimate": 1155316.52
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 855496.2,
+          "current_estimate": 1098299.73
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 872119.15,
+          "current_estimate": 1106057.71
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1491924.31,
+          "current_estimate": 1397418.32
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 375903.32,
+          "current_estimate": 357785.78
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 278076.13,
+          "current_estimate": 297358.19
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 263166.37,
+          "current_estimate": 329621.97
+        }
+      ]
+    },
+    {
+      "project_id": "C2140",
+      "line_items": [
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 1414538.72,
+          "current_estimate": 1511712.21
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 1334098.71,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 1979546.0,
+          "current_estimate": 2465997.64
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 2337249.51,
+          "current_estimate": 2990707.31
+        },
+        {
+          "cost_code": "3200",
+          "description": "Concrete Reinforcement",
+          "original_estimate": 2302190.33,
+          "current_estimate": 2203936.49
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 1635366.01,
+          "current_estimate": 1898310.45
+        },
+        {
+          "cost_code": "3300",
+          "description": "Cast-in-Place Concrete",
+          "original_estimate": 1366446.46,
+          "current_estimate": 1191300.25
+        },
+        {
+          "cost_code": "32000",
+          "description": "Paving",
+          "original_estimate": 1651161.62,
+          "current_estimate": 2187705.3
+        },
+        {
+          "cost_code": "1000",
+          "description": "General Conditions",
+          "original_estimate": 1685384.95,
+          "current_estimate": 1663434.72
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 2169729.4,
+          "current_estimate": 2006401.4
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 522141.46,
+          "current_estimate": 582941.17
+        },
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 703444.8,
+          "current_estimate": 611223.82
+        }
+      ]
+    },
+    {
+      "project_id": "C2141",
+      "line_items": [
+        {
+          "cost_code": "2100",
+          "description": "Site Demolition",
+          "original_estimate": 384729.99,
+          "current_estimate": 363884.02
+        },
+        {
+          "cost_code": "6100",
+          "description": "Rough Carpentry",
+          "original_estimate": 1205953.02,
+          "current_estimate": 1223786.31
+        },
+        {
+          "cost_code": "33000",
+          "description": "Utilities",
+          "original_estimate": 390820.19,
+          "current_estimate": 493210.18
+        },
+        {
+          "cost_code": "9900",
+          "description": "Painting",
+          "original_estimate": 1130732.03,
+          "current_estimate": null
+        },
+        {
+          "cost_code": "31000",
+          "description": "Earthwork Civil",
+          "original_estimate": 1509020.24,
+          "current_estimate": 1879335.02
+        },
+        {
+          "cost_code": "8100",
+          "description": "Doors & Frames",
+          "original_estimate": 624920.45,
+          "current_estimate": 667856.67
+        },
+        {
+          "cost_code": "9200",
+          "description": "Plaster & Gypsum",
+          "original_estimate": 1321745.63,
+          "current_estimate": 1144880.37
+        },
+        {
+          "cost_code": "23000",
+          "description": "HVAC",
+          "original_estimate": 1301280.73,
+          "current_estimate": 1354110.74
+        },
+        {
+          "cost_code": "26000",
+          "description": "Electrical",
+          "original_estimate": 603914.43,
+          "current_estimate": 548094.45
+        },
+        {
+          "cost_code": "4000",
+          "description": "Masonry",
+          "original_estimate": 1398320.63,
+          "current_estimate": 1502963.44
+        },
+        {
+          "cost_code": "22000",
+          "description": "Plumbing",
+          "original_estimate": 1305430.42,
+          "current_estimate": 1743247.59
+        },
+        {
+          "cost_code": "5200",
+          "description": "Metal Fabrications",
+          "original_estimate": 1047560.62,
+          "current_estimate": 1065642.32
+        },
+        {
+          "cost_code": "5100",
+          "description": "Structural Steel",
+          "original_estimate": 1449644.0,
+          "current_estimate": 1527224.77
+        },
+        {
+          "cost_code": "7500",
+          "description": "Roofing",
+          "original_estimate": 1334519.27,
+          "current_estimate": 1581472.86
+        }
+      ]
+    }
+  ],
+  "count": 40
+}
