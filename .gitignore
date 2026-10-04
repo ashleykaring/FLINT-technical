@@ -1,0 +1,17 @@
+.vscode/
+.venv/
+.env
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+warehouse/
+data/staged/
+data/marts/
+
+artifacts/llm/raw_responses/
+
+node_modules/
+dist/

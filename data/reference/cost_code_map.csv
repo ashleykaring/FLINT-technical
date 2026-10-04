@@ -1,0 +1,22 @@
+erp_cost_code,estimate_cost_code,canonical_description,mapping_method,mapping_status
+01-000,1000,General Conditions,manual_semantic,mapped
+02-200,2200,Earthwork,manual_semantic,mapped
+02-300,2100,Site Demolition,manual_semantic,mapped
+03-100,3100,Concrete Formwork,manual_semantic,mapped
+03-200,3200,Concrete Reinforcement,manual_semantic,mapped
+03-300,3300,Cast-in-Place Concrete,manual_semantic,mapped
+04-200,4000,Masonry,manual_semantic,mapped
+05-100,5100,Structural Steel,manual_semantic,mapped
+05-500,5200,Metal Fabrications,manual_semantic,mapped
+06-100,6100,Rough Carpentry,manual_semantic,mapped
+07-500,7500,Roofing,manual_semantic,mapped
+08-100,8100,Doors & Frames,manual_semantic,mapped
+09-200,9200,Plaster & Gypsum,manual_semantic,mapped
+09-900,9900,Painting,manual_semantic,mapped
+22-000,22000,Plumbing,manual_semantic,mapped
+23-000,23000,HVAC,manual_semantic,mapped
+26-000,26000,Electrical,manual_semantic,mapped
+31-000,31000,Earthwork Civil,manual_semantic,mapped
+32-000,32000,Paving,manual_semantic,mapped
+33-000,33000,Utilities,manual_semantic,mapped
+99-999,,Unknown / Unclassified,none,unmapped
