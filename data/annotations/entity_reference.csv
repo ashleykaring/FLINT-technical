@@ -1,0 +1,103 @@
+entity_type,canonical_id,observed_aliases,division,contract_type
+job,B2100,Northgate Medical Office,Building,Cost Plus
+job,B2101,,Building,Lump Sum
+job,B2102,,Building,Lump Sum
+job,B2103,Riverside Distribution Center,Building,Lump Sum
+job,B2104,,Building,GMP
+job,B2105,,Building,GMP
+job,B2106,,Building,GMP
+job,B2107,Cedar Heights Apartments,Building,Lump Sum
+job,B2108,,Building,Lump Sum
+job,B2109,,Building,Lump Sum
+job,B2110,Lakeview Corporate Campus | the Lakeview job,Building,Lump Sum
+job,B2111,,Building,Cost Plus
+job,B2112,,Building,Lump Sum
+job,B2113,,Building,Lump Sum
+job,B2114,,Building,Cost Plus
+job,B2115,Summit Tech Pavilion,Building,Cost Plus
+job,B2116,,Building,Lump Sum
+job,B2117,,Building,Cost Plus
+job,B2118,,Building,GMP
+job,B2119,Harbor Point Retail,Building,Lump Sum
+job,B2120,,Building,GMP
+job,B2121,,Building,GMP
+job,B2122,Maple Grove School,Building,Lump Sum
+job,B2123,,Building,Lump Sum
+job,C2124,Route 9 Interchange,Civil,T&M
+job,C2125,,Civil,Lump Sum
+job,C2126,,Civil,Lump Sum
+job,C2127,Eastside Water Main,Civil,Lump Sum
+job,C2128,,Civil,GMP
+job,C2129,,Civil,Cost Plus
+job,C2130,Delta Bridge Rehab,Civil,GMP
+job,C2131,,Civil,GMP
+job,C2132,,Civil,Cost Plus
+job,C2133,,Civil,T&M
+job,C2134,Airport Taxiway Extension,Civil,Lump Sum
+job,C2135,,Civil,Cost Plus
+job,C2136,,Civil,GMP
+job,C2137,,Civil,Cost Plus
+job,C2138,Kingston Levee,Civil,GMP
+job,C2139,,Civil,Cost Plus
+job,C2140,,Civil,GMP
+job,C2141,Valley Rail Crossing | the Valley job,Civil,Lump Sum
+subcontractor,SUB001,SUB-001 | Sub- 001 | Sub-001 | sub-001,,
+subcontractor,SUB002,SUB-002 | Sub- 002 | Sub-002 | sub-002,,
+subcontractor,SUB003,SUB-003 | Sub- 003 | Sub-003 | sub-003,,
+subcontractor,SUB004,SUB-004 | Sub- 004 | Sub-004 | sub-004,,
+subcontractor,SUB005,SUB-005 | Sub- 005 | Sub-005 | sub-005,,
+subcontractor,SUB006,SUB-006 | Sub- 006 | Sub-006 | sub-006,,
+subcontractor,SUB007,SUB-007 | Sub- 007 | Sub-007 | sub-007,,
+subcontractor,SUB008,SUB-008 | Sub- 008 | Sub-008 | sub-008,,
+subcontractor,SUB009,SUB-009 | Sub- 009 | Sub-009 | sub-009,,
+subcontractor,SUB010,SUB-010 | Sub- 010 | Sub-010 | sub-010,,
+subcontractor,SUB011,SUB-011 | Sub- 011 | Sub-011 | sub-011,,
+subcontractor,SUB012,SUB-012 | Sub- 012 | Sub-012 | sub-012,,
+subcontractor,SUB013,SUB-013 | Sub- 013 | Sub-013 | sub-013,,
+subcontractor,SUB014,SUB-014 | Sub- 014 | Sub-014 | sub-014,,
+subcontractor,SUB015,SUB-015 | Sub- 015 | Sub-015 | sub-015,,
+subcontractor,SUB016,SUB-016 | Sub- 016 | Sub-016 | sub-016,,
+subcontractor,SUB017,SUB-017 | Sub- 017 | Sub-017 | sub-017,,
+subcontractor,SUB018,SUB-018 | Sub- 018 | Sub-018 | sub-018,,
+subcontractor,SUB019,SUB-019 | Sub- 019 | Sub-019 | sub-019,,
+subcontractor,SUB020,SUB-020 | Sub- 020 | Sub-020 | sub-020,,
+subcontractor,SUB021,SUB-021 | Sub- 021 | Sub-021 | sub-021,,
+subcontractor,SUB022,SUB-022 | Sub- 022 | Sub-022 | sub-022,,
+subcontractor,SUB023,SUB-023 | Sub- 023 | Sub-023 | sub-023,,
+subcontractor,SUB024,SUB-024 | Sub- 024 | Sub-024 | sub-024,,
+subcontractor,SUB025,SUB-025 | Sub- 025 | Sub-025 | sub-025,,
+subcontractor,SUB026,SUB-026 | Sub- 026 | Sub-026 | sub-026,,
+subcontractor,SUB027,SUB-027 | Sub- 027 | Sub-027 | sub-027,,
+subcontractor,SUB028,SUB-028 | Sub- 028 | Sub-028 | sub-028,,
+subcontractor,SUB029,SUB-029 | Sub- 029 | Sub-029 | sub-029,,
+subcontractor,SUB030,SUB-030 | Sub- 030 | Sub-030 | sub-030,,
+subcontractor,SUB031,SUB-031 | Sub- 031 | Sub-031 | sub-031,,
+subcontractor,SUB032,SUB-032 | Sub- 032 | Sub-032 | sub-032,,
+subcontractor,SUB033,SUB-033 | Sub- 033 | Sub-033 | sub-033,,
+subcontractor,SUB034,SUB-034 | Sub- 034 | Sub-034 | sub-034,,
+subcontractor,SUB035,SUB-035 | Sub- 035 | Sub-035 | sub-035,,
+subcontractor,SUB036,SUB-036 | Sub- 036 | Sub-036 | sub-036,,
+subcontractor,SUB037,SUB-037 | Sub- 037 | Sub-037 | sub-037,,
+subcontractor,SUB038,SUB-038 | Sub- 038 | Sub-038 | sub-038,,
+subcontractor,SUB039,SUB-039 | Sub- 039 | Sub-039 | sub-039,,
+subcontractor,SUB040,SUB-040 | Sub- 040 | Sub-040 | sub-040,,
+subcontractor,SUB041,SUB-041 | Sub- 041 | Sub-041 | sub-041,,
+subcontractor,SUB042,SUB-042 | Sub- 042 | Sub-042 | sub-042,,
+subcontractor,SUB043,SUB-043 | Sub- 043 | Sub-043 | sub-043,,
+subcontractor,SUB044,SUB-044 | Sub- 044 | Sub-044 | sub-044,,
+subcontractor,SUB045,SUB-045 | Sub- 045 | Sub-045 | sub-045,,
+subcontractor,SUB046,SUB-046 | Sub- 046 | Sub-046 | sub-046,,
+subcontractor,SUB047,SUB-047 | Sub- 047 | Sub-047 | sub-047,,
+subcontractor,SUB048,SUB-048 | Sub- 048 | Sub-048 | sub-048,,
+subcontractor,SUB049,SUB-049 | Sub- 049 | Sub-049 | sub-049,,
+subcontractor,SUB050,SUB-050 | Sub- 050 | Sub-050 | sub-050,,
+subcontractor,SUB051,SUB-051 | Sub- 051 | Sub-051 | sub-051,,
+subcontractor,SUB052,SUB-052 | Sub- 052 | Sub-052 | sub-052,,
+subcontractor,SUB053,SUB-053 | Sub- 053 | Sub-053 | sub-053,,
+subcontractor,SUB054,SUB-054 | Sub- 054 | Sub-054 | sub-054,,
+subcontractor,SUB055,SUB-055 | Sub- 055 | Sub-055 | sub-055,,
+subcontractor,SUB056,SUB-056 | Sub- 056 | Sub-056 | sub-056,,
+subcontractor,SUB057,SUB-057 | Sub- 057 | Sub-057 | sub-057,,
+subcontractor,SUB058,SUB-058 | Sub- 058 | Sub-058 | sub-058,,
+subcontractor,SUB059,SUB-059 | Sub- 059 | Sub-059 | sub-059,,
+subcontractor,SUB060,SUB-060 | Sub- 060 | Sub-060 | sub-060,,

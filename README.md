@@ -3,7 +3,7 @@
 This repository contains a reproducible data pipeline and application slice for
 the FLINT construction portfolio case study.
 
-## Current milestone: ingestion through analytical marts
+## Current milestone: ingestion through governed correspondence events
 
 The ingestion pipeline loads every supplied source into a local DuckDB database
 without applying business-level cleaning. Source values are retained as strings
@@ -134,6 +134,53 @@ uv run pytest
 uv run ruff check .
 uv run ruff format --check .
 ```
+
+## Prepare correspondence evaluation labels
+
+Create the deterministic 45-document evaluation sample before integrating an
+LLM provider:
+
+```powershell
+uv run flint prepare-labels
+uv run flint validate-labels
+```
+
+Complete `data/annotations/correspondence_gold.jsonl` using the adjacent
+annotation README and entity reference. Preparation refuses to overwrite an
+existing gold file unless `--force` is supplied.
+
+## Run correspondence extraction
+
+Set `GEMINI_API_KEY` in the shell, then start with one labeled document:
+
+```powershell
+uv run flint extract-correspondence --doc-id CO-2027
+uv run flint evaluate-extraction
+```
+
+Responses are schema-validated, grounded against source text and canonical
+entities, persisted to DuckDB, and cached by the complete prompt/model/schema
+fingerprint. See [`docs/llm-integration.md`](docs/llm-integration.md) before
+running more than one document.
+
+After validating the labeled sample, process the full correspondence source in
+quota-aware batches (1,200 documents become 12 model requests):
+
+```powershell
+uv run flint extract-correspondence --all --batch-size 100
+```
+
+After all documents are extracted, build the current, reconciled correspondence
+fact without making any additional API calls:
+
+```powershell
+uv run flint model-correspondence
+```
+
+This selects one current extraction per document, applies reviewed job aliases,
+normalizes deterministic schedule-only classifications, and fails atomically if
+coverage, entity resolution, grounding, or event reconciliation is incomplete.
+See [`docs/correspondence-model.md`](docs/correspondence-model.md).
 
 ## Repository layout
 

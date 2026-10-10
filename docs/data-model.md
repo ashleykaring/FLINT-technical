@@ -13,6 +13,9 @@ flowchart LR
     DC --> FB
     DJ --> FS[fact_schedule_activity]
     DJ --> FE[fact_equipment_usage]
+    DJ --> FCE[fact_correspondence_event_current]
+    DS --> FCE
+    AEC[ai_correspondence_extraction_current] --> FCE
     FC --> MJF[mart_job_financial]
     FB --> MJF
     DJ --> MJF
@@ -33,12 +36,19 @@ flowchart LR
 | `fact_budget` | One job and estimating cost-code line | `budget_key` |
 | `fact_schedule_activity` | One schedule activity | `schedule_activity_key` |
 | `fact_equipment_usage` | One valid equipment assignment row | `equipment_usage_key` |
+| `ai_correspondence_extraction_current` | One current extraction per correspondence document | `cache_key` |
+| `fact_correspondence_event_current` | One current, cleaned correspondence event | `correspondence_event_key` |
 
 Exact duplicate ledger rows are excluded from the transaction fact, but their
 counts and amounts are reconciled explicitly. Missing job identifiers, unknown
 jobs, unmapped cost codes, and missing subcontractors are assigned to visible
 unknown dimension members. This preserves the affected dollars instead of
 dropping them through inner joins.
+
+Historical AI responses remain in `ai_correspondence_extractions` and
+`fact_correspondence_event`. Analysis must use the `_current` tables so prompt
+iterations cannot duplicate documents or events. Reviewed alias and event-type
+corrections retain both the extracted and governed values for auditability.
 
 ## Analytical marts
 
@@ -55,3 +65,7 @@ dropping them through inner joins.
 job, budget, ledger, schedule, and equipment rows reconcile from their source
 population into the model. The ledger check also reconciles dollars after the
 explicit duplicate exclusion. A failed check rolls back the entire model build.
+
+`model_correspondence_reconciliation` performs the equivalent post-extraction
+build gate for document coverage, event counts, current-version uniqueness,
+entity resolution, grounding, and deterministic semantic cleanup.

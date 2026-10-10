@@ -17,6 +17,23 @@ dashboard. Ratios are stored as decimal fractions: `0.15` means 15%.
 | Projected margin % | Projected margin / contract value proxy | Null for a zero or missing proxy |
 | Equipment cost per production unit | Total equipment cost / production units | Portfolio views use ratio-of-sums weighting |
 
+## Correspondence measures
+
+Correspondence `amount` is an extracted event magnitude, not automatically an
+additive portfolio cost. Change orders, potential costs, budget variances, and
+backcharges represent different commercial concepts or lifecycle stages and may
+overlap. Analysis must aggregate them separately unless an explicit de-duplication
+or lifecycle rule justifies combination.
+
+Schedule-impact days are also event-level magnitudes. Multiple documents may
+describe the same underlying condition, so portfolio reporting surfaces counts,
+maximum exposure, and categorized events before treating day values as additive.
+
+The governed fact retains `booking_status`, `amount_status`, and
+`approval_status`; these fields determine whether an amount is recorded,
+provisional, or approved and must not be collapsed into a single committed-cost
+measure without a documented business rule.
+
 ## Material assumptions
 
 The supplied job field named `original_budget` is used as a **contract value
