@@ -1,0 +1,23 @@
+scope_key,division,estimate_cost_code,resolution_basis
+utilities,ALL,33000,Utilities scope maps to canonical utilities
+steel erection,ALL,5100,Steel erection maps to structural steel
+hvac,ALL,23000,HVAC scope maps to canonical HVAC
+electrical,ALL,26000,Electrical scope maps to canonical electrical
+structural steel,ALL,5100,Structural steel exact semantic match
+switchgear,ALL,26000,Switchgear maps to electrical
+underground utilities,ALL,33000,Underground utilities maps to canonical utilities
+storm/sanitary utilities,ALL,33000,Storm and sanitary work maps to canonical utilities
+electrical rough-in,ALL,26000,Electrical rough-in maps to canonical electrical
+mechanical / hvac,ALL,23000,Mechanical and HVAC scope maps to canonical HVAC
+steel package,ALL,5100,Steel package maps to structural steel
+rooftop units,ALL,23000,Rooftop units map to HVAC
+cast-in-place concrete,ALL,3300,Cast-in-place concrete exact semantic match
+cip concrete,ALL,3300,CIP abbreviation maps to cast-in-place concrete
+slab pour,ALL,3300,Slab pour maps to cast-in-place concrete
+foundation concrete,ALL,3300,Foundation concrete maps to cast-in-place concrete
+excavation,Building,2200,Building excavation maps to building earthwork
+excavation,Civil,31000,Civil excavation maps to civil earthwork
+earthwork,Building,2200,Building earthwork maps to building earthwork
+earthwork,Civil,31000,Civil earthwork maps to civil earthwork
+site grading,Building,2200,Building site grading maps to building earthwork
+site grading,Civil,31000,Civil site grading maps to civil earthwork

@@ -34,6 +34,21 @@ The governed fact retains `booking_status`, `amount_status`, and
 provisional, or approved and must not be collapsed into a single committed-cost
 measure without a documented business rule.
 
+### Risk-adjusted scenarios
+
+| Measure | Formula | Interpretation |
+|---|---|---|
+| Confirmed unbooked cost | Authorized, not-booked change-order cost | Cost likely to enter the system |
+| Unbooked contract value | Not-booked change-order contract value | Revenue proxy adjustment; still subject to the contract-value caveat |
+| Confirmed adjusted margin | Base projected margin + unbooked contract value - confirmed unbooked cost | Most supportable correspondence adjustment |
+| Potential downside cost | Pending change-order cost + RFI potential cost | Scenario amount, not a booked forecast |
+| Downside scenario margin | Confirmed adjusted margin - potential downside cost | Deliberately conservative scenario |
+| Reported budget variance | Budget-variance log amount | Warning measure only; excluded from scenario arithmetic to avoid overlap |
+
+Backcharges have no supplied amount and are reported as event counts. Schedule
+days are summarized using event count and maximum stated delay/recovery; they
+are not summed because multiple documents may refer to the same condition.
+
 ## Material assumptions
 
 The supplied job field named `original_budget` is used as a **contract value
@@ -67,3 +82,9 @@ points, estimate drift of at least 10%, or reversed actual schedule dates. It
 is watch for at least 5 points, missing current-estimate lines, or unmapped cost
 postings. The mart includes a human-readable `risk_reasons` field so every
 classification can be explained.
+
+The combined dashboard status retains the base portfolio status. It also marks
+a job high when confirmed unbooked cost is at least 5% of current cost budget or
+maximum reported delay is at least 15 days, and watch when any pending/potential
+cost, budget variance, or schedule event exists. A negative downside-scenario
+margin is critical. `combined_risk_reasons` exposes every triggered condition.

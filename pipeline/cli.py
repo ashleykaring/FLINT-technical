@@ -15,6 +15,8 @@ from pipeline.ai.evaluation import EvaluationError, evaluate_extractions, render
 from pipeline.ai.modeling import CorrespondenceModelError, build_correspondence_model
 from pipeline.ai.providers.gemini import GeminiConfigurationError
 from pipeline.ai.runner import ExtractionError, extract_correspondence, render_extraction_result
+from pipeline.analysis.runner import AnalysisBuildError, build_analysis
+from pipeline.api.app import create_app
 from pipeline.config import Settings
 from pipeline.ingest.runner import IngestionError, ingest_all
 from pipeline.model.runner import ModelBuildError, build_model
@@ -75,6 +77,20 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Build the governed current correspondence fact and quality checks",
     )
     _add_path_arguments(correspondence_model_parser)
+
+    analysis_parser = subparsers.add_parser(
+        "analyze",
+        help="Build question-aligned risk and exposure marts",
+    )
+    _add_path_arguments(analysis_parser)
+
+    api_parser = subparsers.add_parser(
+        "serve-api",
+        help="Serve the read-only dashboard API",
+    )
+    _add_path_arguments(api_parser)
+    api_parser.add_argument("--host", default="127.0.0.1", help="API bind address")
+    api_parser.add_argument("--port", type=int, default=8000, help="API port (default: 8000)")
 
     build_parser = subparsers.add_parser(
         "build",
@@ -299,6 +315,24 @@ def main(argv: Sequence[str] | None = None) -> int:
         except (CorrespondenceModelError, FileNotFoundError, ValueError) as exc:
             print(f"Correspondence model failed: {exc}")
             return 1
+        return 0
+
+    if args.command == "analyze":
+        settings = Settings.from_root(args.root, args.database)
+        try:
+            results = build_analysis(settings)
+            _print_table_summary("Analysis build completed", results)
+            print(f"\nDatabase: {settings.database_path}")
+        except (AnalysisBuildError, FileNotFoundError, ValueError) as exc:
+            print(f"Analysis build failed: {exc}")
+            return 1
+        return 0
+
+    if args.command == "serve-api":
+        import uvicorn
+
+        settings = Settings.from_root(args.root, args.database)
+        uvicorn.run(create_app(settings), host=args.host, port=args.port)
         return 0
 
     if args.command == "build":

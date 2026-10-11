@@ -3,7 +3,7 @@
 This repository contains a reproducible data pipeline and application slice for
 the FLINT construction portfolio case study.
 
-## Current milestone: ingestion through governed correspondence events
+## Current milestone: reconciled analysis marts
 
 The ingestion pipeline loads every supplied source into a local DuckDB database
 without applying business-level cleaning. Source values are retained as strings
@@ -182,10 +182,49 @@ normalizes deterministic schedule-only classifications, and fails atomically if
 coverage, entity resolution, grounding, or event reconciliation is incomplete.
 See [`docs/correspondence-model.md`](docs/correspondence-model.md).
 
+Build the question-aligned analysis layer after the base and correspondence
+models are current:
+
+```powershell
+uv run flint analyze
+```
+
+This maps correspondence scopes to canonical cost codes; keeps confirmed,
+pending, potential, and budget-variance amounts separate; creates job,
+cost-code, subcontractor, and monthly trend marts; and enforces eight additional
+reconciliation checks. Initial results are documented in
+[`docs/analysis-findings.md`](docs/analysis-findings.md).
+
+## Run the dashboard
+
+The dashboard is a React/TypeScript application backed by a read-only FastAPI
+service. Build the analytical marts before starting either process.
+
+In the first terminal:
+
+```powershell
+uv run flint analyze
+uv run flint serve-api
+```
+
+In a second terminal:
+
+```powershell
+cd app
+npm.cmd install
+npm.cmd run dev
+```
+
+Open `http://127.0.0.1:5173`. Vite proxies `/api` calls to the local service at
+`http://127.0.0.1:8000`. The portfolio page includes filters, scenario
+comparison, cost-versus-progress risk matrix, cost-risk Pareto, KPI cards, and
+a ranked job action queue. See [`docs/dashboard.md`](docs/dashboard.md) for the
+application and API design.
+
 ## Repository layout
 
 ```text
-app/                 React/TypeScript application (later milestone)
+app/                 React/TypeScript portfolio dashboard
 data/raw/            Immutable supplied extracts
 data/reference/      Governed cross-system mappings
 docs/                Data model, findings, and architecture documentation
