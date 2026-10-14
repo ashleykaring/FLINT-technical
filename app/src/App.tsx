@@ -5,6 +5,7 @@ import {
   ParetoChart,
   RiskMatrix,
   ScenarioComparison,
+  ScenarioLegend,
   StatusSummary,
 } from "./components/Charts";
 import { currency, percent, titleCase } from "./format";
@@ -197,7 +198,6 @@ function KpiCard({
       aria-label={`${label}: ${value}. View cost scenarios.`}
     >
       {content}
-      <small>View cost scenarios →</small>
     </button>
   ) : (
     <article className={`kpi-card kpi-${tone}`}>{content}</article>
@@ -233,7 +233,7 @@ function BudgetOutlookCard({ outlook }: { outlook: BudgetOutlookSummary }) {
   ];
   return (
     <article className="kpi-card budget-outlook-card">
-      <p>Budget outlook</p>
+      <p className="eyebrow">Budget outlook</p>
       <strong>
         {outlook.currently_over_count} now ·{" "}
         {outlook.currently_over_count + outlook.forecast_only_count} projected
@@ -325,10 +325,6 @@ function CostScenarioModal({
         </button>
         <p className="eyebrow">Portfolio cost outlook</p>
         <h2 id="cost-scenario-title">What the projected final cost includes</h2>
-        <p className="modal-intro">
-          The headline is the base forecast—not cost incurred so far.
-          Correspondence exposure is shown in controlled scenarios.
-        </p>
         <div className="modal-current-cost">
           <span>Recorded cost to date</span>
           <strong>{currency(actualCostToDate)}</strong>
@@ -361,8 +357,6 @@ function CostScenarioModal({
         <aside>
           <strong>Not included in the base:</strong> approved unbooked
           correspondence costs, pending changes, and RFI potential costs.
-          Committed postings remain separate because they may overlap actuals or
-          forecasts.
         </aside>
       </section>
     </div>
@@ -569,7 +563,7 @@ function App() {
           {dashboard && (
             <>
               <section
-                className="kpi-grid"
+                className="kpi-grid portfolio-kpi-grid"
                 aria-label="Portfolio key performance indicators"
               >
                 <KpiCard
@@ -586,7 +580,7 @@ function App() {
                 <KpiCard
                   label="Projected final cost"
                   value={currency(dashboard.kpis.projected_final_cost)}
-                  note="Final-cost forecast—not cost incurred to date"
+                  note="Final-cost forecast"
                   onClick={() => setShowCostScenarios(true)}
                 />
                 <KpiCard
@@ -621,7 +615,7 @@ function App() {
                       <p className="eyebrow">Commercial outlook</p>
                       <h2>Scenario comparison</h2>
                     </div>
-                    <span className="metric-pill">Cost vs proxy</span>
+                    <ScenarioLegend />
                   </div>
                   <ScenarioComparison scenarios={dashboard.scenarios} />
                 </article>
@@ -671,10 +665,7 @@ function App() {
                     <p className="eyebrow">Action queue</p>
                     <h2>Ranked job risk</h2>
                   </div>
-                  <p>
-                    Ordered by projected variance plus potential downside.
-                    Select a row to connect it to the risk matrix.
-                  </p>
+                  <p>Ordered by projected variance plus potential downside. </p>
                 </div>
                 <JobTable jobs={dashboard.jobs} onSelect={openJob} />
               </section>

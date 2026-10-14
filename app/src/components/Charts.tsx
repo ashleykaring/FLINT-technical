@@ -22,6 +22,15 @@ interface ScenarioComparisonProps {
   scenarios: ScenarioSummary[];
 }
 
+export function ScenarioLegend() {
+  return (
+    <div className="scenario-legend" aria-label="Scenario chart legend">
+      <span><i className="legend-cost" /> Projected final cost</span>
+      <span><i className="legend-marker" /> Original budget</span>
+    </div>
+  );
+}
+
 export function ScenarioComparison({ scenarios }: ScenarioComparisonProps) {
   const maximum = Math.max(
     ...scenarios.flatMap((scenario) => [
@@ -70,10 +79,6 @@ export function ScenarioComparison({ scenarios }: ScenarioComparisonProps) {
           </div>
         );
       })}
-      <div className="scenario-legend">
-        <span><i className="legend-cost" /> Projected final cost</span>
-        <span><i className="legend-marker" /> Original budget</span>
-      </div>
     </div>
   );
 }
@@ -148,7 +153,7 @@ export function RiskMatrix({ jobs, selectedJob, onSelect }: RiskMatrixProps) {
   const xTicks = [0, 0.25, 0.5, 0.75, 1];
 
   return (
-    <div className="chart-wrap">
+    <div className="chart-wrap risk-matrix-chart">
       <svg className="matrix-chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Cost spent versus job progress">
         <rect x={left} y={top} width={plotWidth} height={plotHeight} rx="12" fill="#f8faf7" />
         {xTicks.map((tick) => (
@@ -338,12 +343,12 @@ export function MonthlyCostChart({ points }: { points: MonthlyCostPoint[] }) {
 
 export function CostCodeChart({ costCodes }: { costCodes: CostCodeDetail[] }) {
   const visible = costCodes.slice(0, 10);
-  const width = 760;
-  const rowHeight = 48;
-  const top = 14;
-  const bottom = 18;
-  const labelWidth = 190;
-  const valueWidth = 76;
+  const width = 1000;
+  const rowHeight = 30;
+  const top = 8;
+  const bottom = 10;
+  const labelWidth = 260;
+  const valueWidth = 92;
   const plotWidth = width - labelWidth - valueWidth;
   const height = top + bottom + visible.length * rowHeight;
   const maximum = Math.max(
@@ -360,15 +365,15 @@ export function CostCodeChart({ costCodes }: { costCodes: CostCodeDetail[] }) {
           const projectedWidth = item.projected_cost / maximum * plotWidth;
           return (
             <g key={item.cost_code}>
-              <text x="0" y={y + 13} className="cost-code-name">{item.cost_code} · {item.description}</text>
-              <rect x={labelWidth} y={y + 3} width={plotWidth} height="16" rx="5" fill="#edf1eb" />
-              <rect x={labelWidth} y={y + 3} width={budgetWidth} height="16" rx="5" fill="#b8c2cf">
+              <text x="0" y={y + 18} className="cost-code-name">{item.cost_code} · {item.description}</text>
+              <rect x={labelWidth} y={y + 3} width={plotWidth} height="8" rx="3" fill="#edf1eb" />
+              <rect x={labelWidth} y={y + 3} width={budgetWidth} height="8" rx="3" fill="#b8c2cf">
                 <title>{`Budget ${currency(item.current_budget)}`}</title>
               </rect>
-              <rect x={labelWidth} y={y + 23} width={projectedWidth} height="16" rx="5" fill={item.projected_variance > 0 ? "#e2756d" : "#4d9a72"}>
+              <rect x={labelWidth} y={y + 16} width={projectedWidth} height="8" rx="3" fill={item.projected_variance > 0 ? "#e2756d" : "#4d9a72"}>
                 <title>{`Projected ${currency(item.projected_cost)}`}</title>
               </rect>
-              <text x={width - 2} y={y + 34} textAnchor="end" className={item.projected_variance > 0 ? "variance-label adverse" : "variance-label favorable"}>
+              <text x={width - 2} y={y + 23} textAnchor="end" className={item.projected_variance > 0 ? "variance-label adverse" : "variance-label favorable"}>
                 {currency(item.projected_variance)}
               </text>
             </g>

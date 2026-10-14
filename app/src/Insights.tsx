@@ -5,7 +5,12 @@ import { ParetoChart, StatusSummary } from "./components/Charts";
 import { currency, percent, titleCase } from "./format";
 import type { PortfolioInsights, RiskRankingInsight } from "./types";
 
-function InsightKpi({ label, value, note, tone = "default" }: {
+function InsightKpi({
+  label,
+  value,
+  note,
+  tone = "default",
+}: {
   label: string;
   value: string;
   note: string;
@@ -20,9 +25,16 @@ function InsightKpi({ label, value, note, tone = "default" }: {
   );
 }
 
-function SectionHeading({ number, eyebrow, title, conclusion }: {
+function SectionHeading({
+  number,
+  eyebrow,
+  question,
+  title,
+  conclusion,
+}: {
   number: string;
   eyebrow: string;
+  question: string;
   title: string;
   conclusion: string;
 }) {
@@ -31,6 +43,10 @@ function SectionHeading({ number, eyebrow, title, conclusion }: {
       <span>{number}</span>
       <div>
         <p className="eyebrow">{eyebrow}</p>
+        <p className="insight-question">
+          <strong>Question</strong>
+          {question}
+        </p>
         <h2>{title}</h2>
         <p>{conclusion}</p>
       </div>
@@ -41,19 +57,28 @@ function SectionHeading({ number, eyebrow, title, conclusion }: {
 function MarginBridge({ insights }: { insights: PortfolioInsights }) {
   const values = [
     { label: "Base forecast", value: insights.headline.base_projected_margin },
-    { label: "Confirmed adjusted", value: insights.headline.confirmed_adjusted_margin },
-    { label: "Downside scenario", value: insights.headline.downside_scenario_margin },
+    {
+      label: "Confirmed adjusted",
+      value: insights.headline.confirmed_adjusted_margin,
+    },
+    {
+      label: "Downside scenario",
+      value: insights.headline.downside_scenario_margin,
+    },
   ];
   const maximum = Math.max(...values.map((item) => Math.abs(item.value)), 1);
   return (
     <div className="margin-bridge">
       {values.map((item, index) => (
         <div key={item.label}>
-          <div><span>{item.label}</span><strong>{currency(item.value)}</strong></div>
+          <div>
+            <span>{item.label}</span>
+            <strong>{currency(item.value)}</strong>
+          </div>
           <div className="insight-track">
             <i
               className={`margin-fill margin-fill-${index}`}
-              style={{ width: `${Math.abs(item.value) / maximum * 100}%` }}
+              style={{ width: `${(Math.abs(item.value) / maximum) * 100}%` }}
             />
           </div>
         </div>
@@ -85,16 +110,31 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
       })
       .catch((reason: unknown) => {
         if (!active) return;
-        setError(reason instanceof Error ? reason.message : "Could not load assessment findings");
+        setError(
+          reason instanceof Error
+            ? reason.message
+            : "Could not load assessment findings",
+        );
       });
-    return () => { active = false; };
+    return () => {
+      active = false;
+    };
   }, []);
 
   if (error) {
-    return <section className="error-panel"><strong>Insights are unavailable</strong><p>{error}</p></section>;
+    return (
+      <section className="error-panel">
+        <strong>Insights are unavailable</strong>
+        <p>{error}</p>
+      </section>
+    );
   }
   if (!insights) {
-    return <div className="loading-panel"><span>Loading assessment evidence…</span></div>;
+    return (
+      <div className="loading-panel">
+        <span>Loading assessment evidence…</span>
+      </div>
+    );
   }
 
   const owned = new Map(
@@ -117,7 +157,6 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
         <div>
           <p className="eyebrow">Assessment evidence</p>
           <h1>Assessment findings</h1>
-          <p>Seven decision-focused views connect the assignment questions to governed metrics.</p>
         </div>
       </header>
 
@@ -131,37 +170,92 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
           ["correspondence", "Correspondence"],
           ["quality", "Data quality"],
         ].map(([id, label], index) => (
-          <button key={id} type="button" onClick={() => document.getElementById(id)?.scrollIntoView()}>
-            <span>0{index + 1}</span>{label}
+          <button
+            key={id}
+            type="button"
+            onClick={() => document.getElementById(id)?.scrollIntoView()}
+          >
+            <span>0{index + 1}</span>
+            {label}
           </button>
         ))}
       </section>
 
       <section className="kpi-grid insights-kpis">
-        <InsightKpi tone="dark" label="Net projected variance" value={currency(insights.headline.net_projected_cost_variance)} note="Projected cost above current budget" />
-        <InsightKpi label="Positive variance exposure" value={currency(insights.headline.positive_cost_variance)} note="Adverse jobs before favorable offsets" />
-        <InsightKpi tone="lime" label="Confirmed unbooked" value={currency(insights.headline.confirmed_unbooked_cost)} note="Authorized cost absent from ledger" />
-        <InsightKpi label="Potential downside" value={currency(insights.headline.potential_downside_cost)} note="Pending and potential changes" />
-        <InsightKpi label="Critical burn profile" value={`${insights.headline.critical_cost_progress_jobs} jobs`} note="Cost is materially ahead of progress" />
-        <InsightKpi label="Risk concentration" value={`${insights.headline.jobs_to_eighty_pct} jobs`} note="Reach 80% of adverse variance" />
+        <InsightKpi
+          tone="dark"
+          label="Net projected variance"
+          value={currency(insights.headline.net_projected_cost_variance)}
+          note="Projected cost above current budget"
+        />
+        <InsightKpi
+          label="Positive variance exposure"
+          value={currency(insights.headline.positive_cost_variance)}
+          note="Adverse jobs before favorable offsets"
+        />
+        <InsightKpi
+          tone="lime"
+          label="Confirmed unbooked"
+          value={currency(insights.headline.confirmed_unbooked_cost)}
+          note="Authorized cost absent from ledger"
+        />
+        <InsightKpi
+          label="Potential downside"
+          value={currency(insights.headline.potential_downside_cost)}
+          note="Pending and potential changes"
+        />
+        <InsightKpi
+          label="Critical burn profile"
+          value={`${insights.headline.critical_cost_progress_jobs} jobs`}
+          note="Cost is materially ahead of progress"
+        />
+        <InsightKpi
+          label="Risk concentration"
+          value={`${insights.headline.jobs_to_eighty_pct} jobs`}
+          note="Reach 80% of adverse variance"
+        />
       </section>
 
       <section className="card insight-section" id="financial">
-        <SectionHeading number="01" eyebrow="Financial outlook" title="The portfolio is forecast over budget before correspondence downside" conclusion={`${currency(insights.headline.net_projected_cost_variance)} of net projected cost variance grows to a ${currency(insights.headline.downside_scenario_margin)} provisional downside margin.`} />
+        <SectionHeading
+          number="01"
+          eyebrow="Financial outlook"
+          question="What are projected cost-to-complete and margin by portfolio segment?"
+          title="The portfolio is forecast over budget before correspondence downside"
+          conclusion={`${currency(insights.headline.net_projected_cost_variance)} of net projected cost variance grows to a ${currency(insights.headline.downside_scenario_margin)} provisional downside margin.`}
+        />
         <aside className="assumption-banner">
           <div className="assumption-icon">!</div>
-          <div><strong>Revenue caveat.</strong><span>Margin uses original budget as a contract-value proxy because authoritative contract revenue is not in the source package.</span></div>
+          <div>
+            <strong>Revenue caveat.</strong>
+            <span>
+              Margin uses original budget as a contract-value proxy because
+              authoritative contract revenue is not in the source package.
+            </span>
+          </div>
         </aside>
         <div className="insight-two-column">
           <MarginBridge insights={insights} />
           <div className="division-comparison">
             {insights.divisions.map((division) => (
               <article key={division.division}>
-                <div><strong>{division.division}</strong><span>{division.job_count} jobs</span></div>
+                <div>
+                  <strong>{division.division}</strong>
+                  <span>{division.job_count} jobs</span>
+                </div>
                 <dl>
-                  <div><dt>Projected variance</dt><dd>{currency(division.projected_cost_variance)}</dd></div>
-                  <div><dt>Correspondence downside</dt><dd>{currency(division.potential_downside_cost)}</dd></div>
-                  <div><dt>Downside margin</dt><dd>{currency(division.downside_scenario_margin)}</dd></div>
+                  <div>
+                    <dt>Projected variance</dt>
+                    <dd>{currency(division.projected_cost_variance)}</dd>
+                  </div>
+                  <div>
+                    <dt>Correspondence downside</dt>
+                    <dd>{currency(division.potential_downside_cost)}</dd>
+                  </div>
+                  <div>
+                    <dt>Downside margin</dt>
+                    <dd>{currency(division.downside_scenario_margin)}</dd>
+                  </div>
                 </dl>
               </article>
             ))}
@@ -170,15 +264,31 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
       </section>
 
       <section className="card insight-section" id="concentration">
-        <SectionHeading number="02" eyebrow="Risk concentration" title="A focused job list captures most adverse variance" conclusion={`${insights.headline.jobs_to_eighty_pct} jobs account for 80% of positive variance; the top five alone represent ${percent(insights.headline.top_five_variance_share, 1)}.`} />
+        <SectionHeading
+          number="02"
+          eyebrow="Risk concentration"
+          question="Where is cost risk concentrated across jobs and cost codes?"
+          title="A focused job list captures most adverse variance"
+          conclusion={`${insights.headline.jobs_to_eighty_pct} jobs account for 80% of positive variance; the top five alone represent ${percent(insights.headline.top_five_variance_share, 1)}.`}
+        />
         <div className="insight-two-column concentration-grid">
           <ParetoChart points={rankingAsPareto(insights.risk_ranking)} />
           <div className="rank-list">
             {insights.risk_ranking.slice(0, 7).map((job) => (
-              <button key={job.job_id} type="button" onClick={() => onOpenJob(job.job_id)}>
+              <button
+                key={job.job_id}
+                type="button"
+                onClick={() => onOpenJob(job.job_id)}
+              >
                 <span>{String(job.rank).padStart(2, "0")}</span>
-                <div><strong>{job.job_id}</strong><small>{job.division}</small></div>
-                <div><strong>{currency(job.projected_cost_variance)}</strong><small>{percent(job.cumulative_pct, 1)} cumulative</small></div>
+                <div>
+                  <strong>{job.job_id}</strong>
+                  <small>{job.division}</small>
+                </div>
+                <div>
+                  <strong>{currency(job.projected_cost_variance)}</strong>
+                  <small>{percent(job.cumulative_pct, 1)} cumulative</small>
+                </div>
               </button>
             ))}
           </div>
@@ -186,17 +296,37 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
       </section>
 
       <section className="card insight-section" id="progress">
-        <SectionHeading number="03" eyebrow="Delivery efficiency" title="Cost burn is ahead of reported progress on most jobs" conclusion={`${insights.headline.critical_cost_progress_jobs} jobs are critical, making cost-to-progress divergence the clearest operating signal in the portfolio.`} />
+        <SectionHeading
+          number="03"
+          eyebrow="Delivery efficiency"
+          question="Which jobs are spending ahead of reported progress?"
+          title="Cost burn is ahead of reported progress on most jobs"
+          conclusion={`${insights.headline.critical_cost_progress_jobs} jobs are critical, making cost-to-progress divergence the clearest operating signal in the portfolio.`}
+        />
         <div className="insight-two-column progress-grid">
           <StatusSummary counts={insights.progress_statuses} />
           <div className="compact-table">
-            <div className="compact-table-head"><span>Job</span><span>Progress</span><span>Cost</span><span>Gap</span></div>
+            <div className="compact-table-head">
+              <span>Job</span>
+              <span>Progress</span>
+              <span>Cost</span>
+              <span>Gap</span>
+            </div>
             {insights.cost_progress_jobs.slice(0, 8).map((job) => (
-              <button key={job.job_id} type="button" onClick={() => onOpenJob(job.job_id)}>
-                <span><strong>{job.job_id}</strong><small>{job.division}</small></span>
+              <button
+                key={job.job_id}
+                type="button"
+                onClick={() => onOpenJob(job.job_id)}
+              >
+                <span>
+                  <strong>{job.job_id}</strong>
+                  <small>{job.division}</small>
+                </span>
                 <span>{percent(job.reported_progress_pct)}</span>
                 <span>{percent(job.cost_spent_pct)}</span>
-                <span className="negative-value">{percent(job.cost_progress_variance, 1)}</span>
+                <span className="negative-value">
+                  {percent(job.cost_progress_variance, 1)}
+                </span>
               </button>
             ))}
           </div>
@@ -204,23 +334,50 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
       </section>
 
       <section className="card insight-section" id="equipment">
-        <SectionHeading number="04" eyebrow="Equipment economics" title="Rented equipment carries a cost-per-unit premium in both divisions" conclusion="Ownership strategy should be evaluated by division: utilization is similar, while rented unit economics are consistently higher." />
+        <SectionHeading
+          number="04"
+          eyebrow="Equipment economics"
+          question="How do owned and rented equipment economics compare?"
+          title="Rented equipment carries a cost-per-unit premium in both divisions"
+          conclusion="Ownership strategy should be evaluated by division: utilization is similar, while rented unit economics are consistently higher."
+        />
         <div className="equipment-grid">
           {insights.equipment.map((item) => {
             const ownedPeer = owned.get(item.division);
-            const premium = item.ownership.toLowerCase() === "rented" && ownedPeer?.cost_per_unit && item.cost_per_unit
-              ? item.cost_per_unit / ownedPeer.cost_per_unit - 1
-              : null;
+            const premium =
+              item.ownership.toLowerCase() === "rented" &&
+              ownedPeer?.cost_per_unit &&
+              item.cost_per_unit
+                ? item.cost_per_unit / ownedPeer.cost_per_unit - 1
+                : null;
             return (
               <article key={`${item.division}-${item.ownership}`}>
-                <div><span>{item.division}</span><strong>{titleCase(item.ownership)}</strong></div>
-                <strong>{item.cost_per_unit === null ? "—" : `${currency(item.cost_per_unit, false)} / unit`}</strong>
+                <div>
+                  <span>{item.division}</span>
+                  <strong>{titleCase(item.ownership)}</strong>
+                </div>
+                <strong>
+                  {item.cost_per_unit === null
+                    ? "—"
+                    : `${currency(item.cost_per_unit, false)} / unit`}
+                </strong>
                 <dl>
-                  <div><dt>Utilization</dt><dd>{percent(item.average_utilization, 1)}</dd></div>
-                  <div><dt>Assignments</dt><dd>{item.assignment_count}</dd></div>
-                  <div><dt>Total cost</dt><dd>{currency(item.total_equipment_cost)}</dd></div>
+                  <div>
+                    <dt>Utilization</dt>
+                    <dd>{percent(item.average_utilization, 1)}</dd>
+                  </div>
+                  <div>
+                    <dt>Assignments</dt>
+                    <dd>{item.assignment_count}</dd>
+                  </div>
+                  <div>
+                    <dt>Total cost</dt>
+                    <dd>{currency(item.total_equipment_cost)}</dd>
+                  </div>
                 </dl>
-                {premium !== null && <p>{percent(premium, 1)} premium to owned</p>}
+                {premium !== null && (
+                  <p>{percent(premium, 1)} premium to owned</p>
+                )}
               </article>
             );
           })}
@@ -228,18 +385,37 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
       </section>
 
       <section className="card insight-section" id="cross-division">
-        <SectionHeading number="05" eyebrow="Cross-division exposure" title="Shared cost codes and subcontractors create leverage—and concentration" conclusion={`${insights.cross_division_cost_code_count} cost codes and ${insights.cross_division_subcontractor_count} subcontractors span both divisions.`} />
+        <SectionHeading
+          number="05"
+          eyebrow="Cross-division exposure"
+          question="Which cost codes and subcontractors create cross-division exposure?"
+          title="Shared cost codes and subcontractors create leverage—and concentration"
+          conclusion={`${insights.cross_division_cost_code_count} cost codes and ${insights.cross_division_subcontractor_count} subcontractors span both divisions.`}
+        />
         <div className="cross-counts">
-          <div><strong>{insights.cross_division_cost_code_count}</strong><span>shared cost codes</span></div>
-          <div><strong>{insights.cross_division_subcontractor_count}</strong><span>cross-division subcontractors</span></div>
+          <div>
+            <strong>{insights.cross_division_cost_code_count}</strong>
+            <span>shared cost codes</span>
+          </div>
+          <div>
+            <strong>{insights.cross_division_subcontractor_count}</strong>
+            <span>cross-division subcontractors</span>
+          </div>
         </div>
         <div className="insight-two-column cross-tables">
           <div className="compact-table">
             <h3>Cost-code exposure</h3>
-            <div className="compact-table-head three"><span>Cost code</span><span>Variance</span><span>Downside</span></div>
+            <div className="compact-table-head three">
+              <span>Cost code</span>
+              <span>Variance</span>
+              <span>Downside</span>
+            </div>
             {insights.cost_code_risks.slice(0, 7).map((item) => (
               <div className="compact-row three" key={item.cost_code}>
-                <span><strong>{item.cost_code}</strong><small>{item.description}</small></span>
+                <span>
+                  <strong>{item.cost_code}</strong>
+                  <small>{item.description}</small>
+                </span>
                 <span>{currency(item.projected_cost_variance)}</span>
                 <span>{currency(item.correspondence_downside)}</span>
               </div>
@@ -247,10 +423,17 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
           </div>
           <div className="compact-table">
             <h3>Subcontractor exposure</h3>
-            <div className="compact-table-head three"><span>Subcontractor</span><span>Ledger</span><span>Downside</span></div>
+            <div className="compact-table-head three">
+              <span>Subcontractor</span>
+              <span>Ledger</span>
+              <span>Downside</span>
+            </div>
             {insights.subcontractor_risks.slice(0, 7).map((item) => (
               <div className="compact-row three" key={item.subcontractor_id}>
-                <span><strong>{item.subcontractor_id}</strong><small>{item.division_count} divisions</small></span>
+                <span>
+                  <strong>{item.subcontractor_id}</strong>
+                  <small>{item.division_count} divisions</small>
+                </span>
                 <span>{currency(item.ledger_projected_cost)}</span>
                 <span>{currency(item.potential_downside_cost)}</span>
               </div>
@@ -260,7 +443,13 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
       </section>
 
       <section className="card insight-section" id="correspondence">
-        <SectionHeading number="06" eyebrow="Correspondence risk" title="Project communications contain material exposure not visible in the ledger" conclusion={`${correspondenceEvents.toLocaleString()} extracted events identify ${currency(insights.headline.confirmed_unbooked_cost)} confirmed unbooked cost and ${currency(insights.headline.potential_downside_cost)} potential downside.`} />
+        <SectionHeading
+          number="06"
+          eyebrow="Correspondence risk"
+          question="What exposure appears in correspondence but not the cost system?"
+          title="Project communications contain material exposure not visible in the ledger"
+          conclusion={`${correspondenceEvents.toLocaleString()} extracted events identify ${currency(insights.headline.confirmed_unbooked_cost)} confirmed unbooked cost and ${currency(insights.headline.potential_downside_cost)} potential downside.`}
+        />
         <div className="correspondence-summary">
           {insights.correspondence_categories.map((item) => (
             <article key={item.category}>
@@ -271,26 +460,51 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
           ))}
         </div>
         <div className="compact-table correspondence-jobs">
-          <div className="compact-table-head correspondence-columns"><span>Job</span><span>Events</span><span>Confirmed</span><span>Potential</span><span>Delay</span></div>
+          <div className="compact-table-head correspondence-columns">
+            <span>Job</span>
+            <span>Events</span>
+            <span>Confirmed</span>
+            <span>Potential</span>
+            <span>Delay</span>
+          </div>
           {insights.correspondence_jobs.slice(0, 10).map((job) => (
-            <button className="correspondence-columns" key={job.job_id} type="button" onClick={() => onOpenJob(job.job_id)}>
-              <span><strong>{job.job_id}</strong><small>{job.division}</small></span>
+            <button
+              className="correspondence-columns"
+              key={job.job_id}
+              type="button"
+              onClick={() => onOpenJob(job.job_id)}
+            >
+              <span>
+                <strong>{job.job_id}</strong>
+                <small>{job.division}</small>
+              </span>
               <span>{job.event_count}</span>
               <span>{currency(job.confirmed_unbooked_cost)}</span>
               <span>{currency(job.potential_downside_cost)}</span>
-              <span>{job.maximum_reported_delay_days === null ? "—" : `${job.maximum_reported_delay_days}d`}</span>
+              <span>
+                {job.maximum_reported_delay_days === null
+                  ? "—"
+                  : `${job.maximum_reported_delay_days}d`}
+              </span>
             </button>
           ))}
         </div>
       </section>
 
       <section className="card insight-section" id="quality">
-        <SectionHeading number="07" eyebrow="Trust & controls" title="All analytical reconciliations pass, with source-quality exceptions preserved" conclusion={`${insights.analysis_quality_issue_count} analytical quality issues remain; ${totalQualityIssues.toLocaleString()} source observations are surfaced rather than silently discarded.`} />
+        <SectionHeading
+          number="07"
+          eyebrow="Trust & controls"
+          question="What additional risks, opportunities, and data issues stand out?"
+          title="All analytical reconciliations pass, with source-quality exceptions preserved"
+          conclusion={`${insights.analysis_quality_issue_count} analytical quality issues remain; ${totalQualityIssues.toLocaleString()} source observations are surfaced rather than silently discarded.`}
+        />
         <div className="quality-grid">
           <div className="quality-severity">
             {insights.quality_issues.map((item) => (
               <div key={item.severity} className={`quality-${item.severity}`}>
-                <span>{titleCase(item.severity)}</span><strong>{item.issue_count.toLocaleString()}</strong>
+                <span>{titleCase(item.severity)}</span>
+                <strong>{item.issue_count.toLocaleString()}</strong>
               </div>
             ))}
           </div>
@@ -300,8 +514,18 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
               return (
                 <div key={item.layer}>
                   <span>{item.layer}</span>
-                  <div><i style={{ width: `${item.total_checks ? item.passed_checks / item.total_checks * 100 : 0}%` }} /></div>
-                  <strong className={complete ? "positive-value" : "negative-value"}>{item.passed_checks} / {item.total_checks} passed</strong>
+                  <div>
+                    <i
+                      style={{
+                        width: `${item.total_checks ? (item.passed_checks / item.total_checks) * 100 : 0}%`,
+                      }}
+                    />
+                  </div>
+                  <strong
+                    className={complete ? "positive-value" : "negative-value"}
+                  >
+                    {item.passed_checks} / {item.total_checks} passed
+                  </strong>
                 </div>
               );
             })}

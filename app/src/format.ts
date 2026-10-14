@@ -1,9 +1,11 @@
 export function currency(value: number, compact = true): string {
+  const isBillions = compact && Math.abs(value) >= 1_000_000_000;
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
     notation: compact ? "compact" : "standard",
-    maximumFractionDigits: compact ? 1 : 0,
+    minimumFractionDigits: isBillions ? 2 : 0,
+    maximumFractionDigits: isBillions ? 2 : compact ? 1 : 0,
   }).format(value);
 }
 
