@@ -21,6 +21,7 @@ from pipeline.config import Settings
 from pipeline.ingest.runner import IngestionError, ingest_all
 from pipeline.model.runner import ModelBuildError, build_model
 from pipeline.quality.report import load_quality_summary, render_quality_report
+from pipeline.refresh import RefreshError, refresh_all
 from pipeline.transform.runner import TransformationError, transform_all
 
 
@@ -97,6 +98,31 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Run ingestion, transformation, modeling, and quality reporting",
     )
     _add_path_arguments(build_parser)
+
+    refresh_parser = subparsers.add_parser(
+        "refresh",
+        help="Run the complete pipeline and refresh dashboard analysis",
+    )
+    _add_path_arguments(refresh_parser)
+    refresh_parser.add_argument("--model", help="Gemini extraction model override")
+    refresh_parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=100,
+        help="New or changed correspondence documents per Gemini request (default: 100)",
+    )
+    refresh_parser.add_argument(
+        "--request-interval-seconds",
+        type=float,
+        default=15.0,
+        help="Minimum time between Gemini requests (default: 15)",
+    )
+    refresh_parser.add_argument(
+        "--request-budget",
+        type=int,
+        default=20,
+        help="Refuse a refresh requiring more API calls than this value (default: 20)",
+    )
 
     prepare_labels_parser = subparsers.add_parser(
         "prepare-labels",
@@ -333,6 +359,42 @@ def main(argv: Sequence[str] | None = None) -> int:
 
         settings = Settings.from_root(args.root, args.database)
         uvicorn.run(create_app(settings), host=args.host, port=args.port)
+        return 0
+
+    if args.command == "refresh":
+        settings = Settings.from_root(args.root, args.database)
+        extraction_settings = ExtractionSettings.from_project(settings, model=args.model)
+        print("FLINT end-to-end refresh\n")
+        try:
+            result = refresh_all(
+                settings,
+                extraction_settings,
+                batch_size=args.batch_size,
+                request_interval_seconds=args.request_interval_seconds,
+                request_budget=args.request_budget,
+                progress=print,
+            )
+            print()
+            print(render_extraction_result(result.extraction))
+            print()
+            _print_table_summary("Analysis tables refreshed", result.analysis)
+            print()
+            _print_quality(settings.database_path)
+            print(f"\nRefresh completed\nDatabase: {settings.database_path}")
+        except (
+            AnalysisBuildError,
+            CorrespondenceModelError,
+            ExtractionError,
+            GeminiConfigurationError,
+            IngestionError,
+            ModelBuildError,
+            RefreshError,
+            TransformationError,
+            FileNotFoundError,
+            ValueError,
+        ) as exc:
+            print(f"Refresh failed: {exc}")
+            return 1
         return 0
 
     if args.command == "build":

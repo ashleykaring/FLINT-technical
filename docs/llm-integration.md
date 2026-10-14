@@ -113,3 +113,22 @@ single-current-version fact, applies governed deterministic cleanup, and gates
 the result with coverage, reconciliation, entity-resolution, and grounding
 checks. Historical raw responses remain available for provenance but are not
 included in analysis.
+
+## Selected-job question answering
+
+The job-detail page includes a deliberately small optional AI feature. A single
+question is posted to `POST /api/jobs/{job_id}/ask`; the Python service retrieves
+the governed job detail and job-filtered equipment packet, labels the financial,
+cost-code, schedule, equipment, correspondence, and subcontractor sections, and
+sends only that context to Gemini. The model returns a typed answer, two to four
+supporting facts with source-section labels, and an optional caveat.
+
+The API key remains server-side. The prompt treats correspondence text as
+untrusted data, prohibits outside facts and generated SQL, defines the financial
+scenario terms, and requires an explicit insufficient-data response when the
+packet cannot answer a question. This prototype is single-turn and intentionally
+has no history, persistence, caching, embeddings, or autonomous tools.
+
+Set `GEMINI_QA_MODEL` to choose a separate question-answering model. It defaults
+to `gemini-3.5-flash-lite`, makes one request per submitted question, and retries
+once only for temporary 408/5xx provider failures. It does not retry quota 429s.

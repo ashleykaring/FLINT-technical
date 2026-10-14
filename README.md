@@ -195,6 +195,27 @@ cost-code, subcontractor, and monthly trend marts; and enforces eight additional
 reconciliation checks. Initial results are documented in
 [`docs/analysis-findings.md`](docs/analysis-findings.md).
 
+## Refresh the complete portfolio
+
+After the initial setup, rerun the complete governed pipeline with one command:
+
+```powershell
+uv run flint refresh
+```
+
+`refresh` ingests the current extracts, rebuilds staging, dimensions, facts, and
+base marts, checks all correspondence documents against the extraction cache,
+builds the governed correspondence model, and refreshes the final analysis
+marts and quality report. Unchanged correspondence is read from the cache and
+does not call Gemini. If a document is new or changed, the command requires
+`GEMINI_API_KEY` and extracts only the uncached documents in batches of 100.
+
+Every stage must succeed before the next dependent stage runs. Failed AI,
+entity-resolution, quality, or reconciliation checks stop the refresh before a
+new analysis layer is completed. Useful automation controls include
+`--model`, `--batch-size`, `--request-interval-seconds`, and
+`--request-budget`.
+
 ## Run the dashboard
 
 The dashboard is a React/TypeScript application backed by a read-only FastAPI
@@ -203,9 +224,15 @@ service. Build the analytical marts before starting either process.
 In the first terminal:
 
 ```powershell
+$env:GEMINI_API_KEY = "your-key"
+$env:GEMINI_QA_MODEL = "gemini-3.5-flash-lite"
 uv run flint analyze
 uv run flint serve-api
 ```
+
+Open the React application at `http://localhost:5173`. The equipment operating
+view is `#/equipment`, the assessment findings route is `#/insights`, the data
+flow view is `#/data-flow`, and job drill-downs use `#/jobs/{job_id}`.
 
 In a second terminal:
 
@@ -218,8 +245,10 @@ npm.cmd run dev
 Open `http://127.0.0.1:5173`. Vite proxies `/api` calls to the local service at
 `http://127.0.0.1:8000`. The portfolio page includes filters, scenario
 comparison, cost-versus-progress risk matrix, cost-risk Pareto, KPI cards, and
-a ranked job action queue. See [`docs/dashboard.md`](docs/dashboard.md) for the
-application and API design.
+a ranked job action queue. Selecting a job opens its financial scenarios,
+monthly trends, cost-code variances, correspondence evidence, schedule risks,
+subcontractor exposure, and a single-turn grounded Gemini question box. See
+[`docs/dashboard.md`](docs/dashboard.md) for the application and API design.
 
 ## Repository layout
 

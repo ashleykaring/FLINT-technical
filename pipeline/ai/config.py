@@ -6,7 +6,7 @@ from pathlib import Path
 
 from pipeline.config import Settings
 
-DEFAULT_GEMINI_MODEL = "gemini-3.8-flash"
+DEFAULT_GEMINI_MODEL = "gemini-3.5-flash-lite"
 PROMPT_VERSION = "correspondence-v3"
 SCHEMA_VERSION = "correspondence-event-v2"
 

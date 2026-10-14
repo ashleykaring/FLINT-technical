@@ -4,6 +4,10 @@ The dimensional model separates reusable business entities from events and
 dashboard-ready aggregates. It is rebuilt from the typed staging layer with
 `uv run flint model` and is included in `uv run flint build`.
 
+Once correspondence extraction has been initialized, `uv run flint refresh`
+reruns the complete source-to-analysis dependency chain. It uses content and
+prompt fingerprints to submit only new or changed correspondence to Gemini.
+
 ```mermaid
 flowchart LR
     DJ[dim_job] --> FC[fact_cost_transaction]
