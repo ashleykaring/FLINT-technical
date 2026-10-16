@@ -9,7 +9,7 @@ interface FlowDetailItem {
 interface FlowDetail {
   eyebrow: string;
   title: string;
-  summary: string;
+  summary?: string;
   items: FlowDetailItem[];
 }
 
@@ -56,8 +56,6 @@ const stageDetails: Record<string, FlowDetail> = {
   raw: {
     eyebrow: "Landing layer",
     title: "Raw DuckDB tables",
-    summary:
-      "Every supplied physical file is landed without applying business meaning. The estimating JSON and its flattened validation CSV remain separate here.",
     items: [
       {
         name: "raw_jobs",
@@ -142,8 +140,7 @@ const stageDetails: Record<string, FlowDetail> = {
   references: {
     eyebrow: "Governance",
     title: "Reference mappings",
-    summary:
-      "Reviewed crosswalks resolve incompatible identifiers and taxonomies without hiding original source values.",
+    summary: "Crosswalks resolve incompatible identifiers and taxonomies.",
     items: [
       {
         name: "ref_cost_code_map",
@@ -170,12 +167,12 @@ const stageDetails: Record<string, FlowDetail> = {
     items: [
       {
         name: "dim_job",
-        grain: "One canonical job, plus unknown",
+        grain: "One job",
         purpose: "Carries division, contract, manager, budget, and progress.",
       },
       {
         name: "dim_cost_code",
-        grain: "One canonical cost code, plus unmapped",
+        grain: "One cost code, plus unmapped",
         purpose:
           "Provides a shared taxonomy for budgets, costs, and correspondence.",
       },
@@ -190,7 +187,7 @@ const stageDetails: Record<string, FlowDetail> = {
     eyebrow: "Business events",
     title: "Primary facts",
     summary:
-      "Five event tables retain the measurable activity used by the analytical marts.",
+      "Five event tables retain the activity used by the analytical marts.",
     items: [
       {
         name: "fact_cost_transaction",
@@ -220,10 +217,10 @@ const stageDetails: Record<string, FlowDetail> = {
     ],
   },
   ai: {
-    eyebrow: "Bounded AI path",
+    eyebrow: "AI path",
     title: "Correspondence extraction",
     summary:
-      "Gemini creates a schema-constrained draft. Deterministic validation, alias resolution, and current-version selection govern it before analysis.",
+      "Gemini creates a schema-constrained extraction. Schema validation, alias resolution, and current-version selection happen before analysis.",
     items: [
       {
         name: "ai_correspondence_extractions",
@@ -246,27 +243,27 @@ const stageDetails: Record<string, FlowDetail> = {
     eyebrow: "Decision layer",
     title: "Major analytical marts",
     summary:
-      "The primary decision-facing marts are shown here. Supporting exposure and reconciliation tables remain in DuckDB.",
+      "Analysis-ready tables that turn cleaned data into decision-focused metrics.",
     items: [
       {
         name: "mart_job_financial",
-        grain: "One canonical job",
+        grain: "One job",
         purpose:
           "Combines budget, incurred cost, forecast, projected cost, and variance.",
       },
       {
         name: "mart_cost_vs_progress",
-        grain: "One canonical job",
+        grain: "One job",
         purpose: "Compares cost consumed with reported physical progress.",
       },
       {
         name: "mart_job_risk_adjusted",
-        grain: "One canonical job",
+        grain: "One job",
         purpose: "Calculates base, confirmed-adjusted, and downside scenarios.",
       },
       {
         name: "mart_job_dashboard",
-        grain: "One canonical job",
+        grain: "One job",
         purpose: "Provides the executive summary and explainable risk status.",
       },
       {
@@ -294,8 +291,6 @@ const stageDetails: Record<string, FlowDetail> = {
   api: {
     eyebrow: "Serving layer",
     title: "FastAPI endpoints",
-    summary:
-      "Typed, read-only routes assemble governed DuckDB results without recreating business logic in the browser.",
     items: [
       {
         name: "GET /api/portfolio",
@@ -403,7 +398,9 @@ function FlowDetailModal({
         </button>
         <p className="eyebrow">{detail.eyebrow}</p>
         <h2 id="flow-detail-title">{detail.title}</h2>
-        <p className="flow-detail-summary">{detail.summary}</p>
+        {detail.summary && (
+          <p className="flow-detail-summary">{detail.summary}</p>
+        )}
         <div className="flow-detail-head" aria-hidden="true">
           <span>Table or endpoint</span>
           <span>Grain or contract</span>
@@ -463,7 +460,6 @@ function DataFlowPage() {
             onOpen={setActiveDetail}
           />
           <div className="horizontal-flow" aria-hidden="true">
-            <i />
             <b>→</b>
           </div>
           <StageButton
@@ -545,14 +541,14 @@ function DataFlowPage() {
           </button>
         </section>
 
-        <FlowArrow label="Aggregate for decisions" />
+        <FlowArrow label="Aggregate" />
 
         <StageButton
           detailKey="marts"
           eyebrow="04 · Analytical layer"
           title="DuckDB marts"
           description="Question-ready financial, delivery, equipment, and exposure models"
-          count="8 major marts shown"
+          count="8 major marts"
           tone="lime"
           onOpen={setActiveDetail}
         />
@@ -567,11 +563,9 @@ function DataFlowPage() {
           >
             <span>05 · API</span>
             <strong>FastAPI</strong>
-            <small>Typed, read-only endpoints</small>
             <em>View endpoints →</em>
           </button>
           <div className="horizontal-flow" aria-hidden="true">
-            <i />
             <b>→</b>
           </div>
           <article className="delivery-destination">

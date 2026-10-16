@@ -548,7 +548,7 @@ function App() {
             <section className="error-panel">
               <strong>Dashboard data is unavailable</strong>
               <p>{error}</p>
-              <code>uv run flint analyze</code> then{" "}
+              <code>uv run flint refresh</code> (Gemini API key needed on the first run), then{" "}
               <code>uv run flint serve-api</code>
             </section>
           )}

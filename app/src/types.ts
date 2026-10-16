@@ -333,6 +333,20 @@ export interface ReconciliationInsight {
   total_checks: number;
 }
 
+export interface PortfolioAnomalies {
+  unmapped_ledger_posting_count: number;
+  unmapped_ledger_cost_codes: string[];
+  missing_budget_job_ids: string[];
+  duplicate_ledger_rows_excluded: number;
+  duplicate_ledger_amount_excluded: number;
+  adjustment_transaction_count: number;
+  net_adjustment_amount: number;
+  estimate_drift_job_count: number;
+  reversed_schedule_activity_count: number;
+  reversed_schedule_job_count: number;
+  missing_job_id_posting_count: number;
+}
+
 export interface PortfolioInsights {
   headline: InsightsHeadline;
   divisions: DivisionInsight[];
@@ -349,6 +363,7 @@ export interface PortfolioInsights {
   quality_issues: QualityInsight[];
   reconciliations: ReconciliationInsight[];
   analysis_quality_issue_count: number;
+  anomalies?: PortfolioAnomalies;
 }
 
 export interface EquipmentFilters {

@@ -35,8 +35,8 @@ function SectionHeading({
   number: string;
   eyebrow: string;
   question: string;
-  title: string;
-  conclusion: string;
+  title?: string;
+  conclusion?: string;
 }) {
   return (
     <div className="insight-heading">
@@ -47,23 +47,31 @@ function SectionHeading({
           <strong>Question</strong>
           {question}
         </p>
-        <h2>{title}</h2>
-        <p>{conclusion}</p>
+        {title && <h2>{title}</h2>}
+        {conclusion && <p>{conclusion}</p>}
       </div>
     </div>
   );
 }
 
-function MarginBridge({ insights }: { insights: PortfolioInsights }) {
+function CostScenarioBridge({ insights }: { insights: PortfolioInsights }) {
   const values = [
-    { label: "Base forecast", value: insights.headline.base_projected_margin },
     {
-      label: "Confirmed adjusted",
-      value: insights.headline.confirmed_adjusted_margin,
+      label: "Base projected cost",
+      value: insights.headline.projected_final_cost,
     },
     {
-      label: "Downside scenario",
-      value: insights.headline.downside_scenario_margin,
+      label: "Confirmed cost scenario",
+      value:
+        insights.headline.projected_final_cost +
+        insights.headline.confirmed_unbooked_cost,
+    },
+    {
+      label: "Downside cost scenario",
+      value:
+        insights.headline.projected_final_cost +
+        insights.headline.confirmed_unbooked_cost +
+        insights.headline.potential_downside_cost,
     },
   ];
   const maximum = Math.max(...values.map((item) => Math.abs(item.value)), 1);
@@ -142,14 +150,48 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
       .filter((item) => item.ownership.toLowerCase() === "owned")
       .map((item) => [item.division, item]),
   );
-  const correspondenceEvents = insights.correspondence_categories.reduce(
+  const visibleCorrespondenceCategories = insights.correspondence_categories.filter(
+    (item) =>
+      ![
+        "unbooked_contract_value",
+        "disputed_backcharge_unquantified",
+        "schedule_only",
+      ].includes(item.category),
+  );
+  const correspondenceEvents = visibleCorrespondenceCategories.reduce(
     (total, item) => total + item.event_count,
     0,
   );
-  const totalQualityIssues = insights.quality_issues.reduce(
-    (total, item) => total + item.issue_count,
-    0,
-  );
+  const anomalies = insights.anomalies;
+  const anomalyCards = anomalies
+    ? [
+        {
+          label: "Unmapped cost code",
+          value: anomalies.unmapped_ledger_cost_codes.join(", ") || "—",
+          detail: `${anomalies.unmapped_ledger_posting_count.toLocaleString()} ledger postings could not be mapped`,
+        },
+        {
+          label: "Jobs without budgets",
+          value: `${anomalies.missing_budget_job_ids.length} jobs`,
+          detail: anomalies.missing_budget_job_ids.join(", ") || "None",
+        },
+        {
+          label: "Duplicate ledger rows",
+          value: anomalies.duplicate_ledger_rows_excluded.toLocaleString(),
+          detail: `${currency(anomalies.duplicate_ledger_amount_excluded)} excluded before analysis`,
+        },
+        {
+          label: "Reversed schedule dates",
+          value: `${anomalies.reversed_schedule_activity_count} activities`,
+          detail: `Across ${anomalies.reversed_schedule_job_count} jobs; actual finish precedes start`,
+        },
+        {
+          label: "Missing job IDs",
+          value: `${anomalies.missing_job_id_posting_count} postings`,
+          detail: "Preserved under UNKNOWN_JOB for investigation",
+        },
+      ]
+    : [];
 
   return (
     <div className="insights-page">
@@ -221,21 +263,11 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
           number="01"
           eyebrow="Financial outlook"
           question="What are projected cost-to-complete and margin by portfolio segment?"
-          title="The portfolio is forecast over budget before correspondence downside"
-          conclusion={`${currency(insights.headline.net_projected_cost_variance)} of net projected cost variance grows to a ${currency(insights.headline.downside_scenario_margin)} provisional downside margin.`}
+          title="Projected portfolio cost increases under correspondence downside"
+          conclusion={`${currency(insights.headline.projected_final_cost)} of base projected cost rises to ${currency(insights.headline.projected_final_cost + insights.headline.confirmed_unbooked_cost + insights.headline.potential_downside_cost)} if confirmed and potential correspondence costs materialize.`}
         />
-        <aside className="assumption-banner">
-          <div className="assumption-icon">!</div>
-          <div>
-            <strong>Revenue caveat.</strong>
-            <span>
-              Margin uses original budget as a contract-value proxy because
-              authoritative contract revenue is not in the source package.
-            </span>
-          </div>
-        </aside>
         <div className="insight-two-column">
-          <MarginBridge insights={insights} />
+          <CostScenarioBridge insights={insights} />
           <div className="division-comparison">
             {insights.divisions.map((division) => (
               <article key={division.division}>
@@ -245,16 +277,26 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
                 </div>
                 <dl>
                   <div>
+                    <dt>Current budget</dt>
+                    <dd>{currency(division.current_cost_budget)}</dd>
+                  </div>
+                  <div>
+                    <dt>Base projected cost</dt>
+                    <dd>{currency(division.projected_final_cost)}</dd>
+                  </div>
+                  <div>
                     <dt>Projected variance</dt>
                     <dd>{currency(division.projected_cost_variance)}</dd>
                   </div>
                   <div>
-                    <dt>Correspondence downside</dt>
-                    <dd>{currency(division.potential_downside_cost)}</dd>
-                  </div>
-                  <div>
-                    <dt>Downside margin</dt>
-                    <dd>{currency(division.downside_scenario_margin)}</dd>
+                    <dt>Downside projected cost</dt>
+                    <dd>
+                      {currency(
+                        division.projected_final_cost +
+                          division.confirmed_unbooked_cost +
+                          division.potential_downside_cost,
+                      )}
+                    </dd>
                   </div>
                 </dl>
               </article>
@@ -287,7 +329,6 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
                 </div>
                 <div>
                   <strong>{currency(job.projected_cost_variance)}</strong>
-                  <small>{percent(job.cumulative_pct, 1)} cumulative</small>
                 </div>
               </button>
             ))}
@@ -301,7 +342,7 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
           eyebrow="Delivery efficiency"
           question="Which jobs are spending ahead of reported progress?"
           title="Cost burn is ahead of reported progress on most jobs"
-          conclusion={`${insights.headline.critical_cost_progress_jobs} jobs are critical, making cost-to-progress divergence the clearest operating signal in the portfolio.`}
+          conclusion={`${insights.headline.critical_cost_progress_jobs} jobs are critical, making cost-to-progress divergence is apparent.`}
         />
         <div className="insight-two-column progress-grid">
           <StatusSummary counts={insights.progress_statuses} />
@@ -389,7 +430,7 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
           number="05"
           eyebrow="Cross-division exposure"
           question="Which cost codes and subcontractors create cross-division exposure?"
-          title="Shared cost codes and subcontractors create leverage—and concentration"
+          title="Shared cost codes and subcontractors"
           conclusion={`${insights.cross_division_cost_code_count} cost codes and ${insights.cross_division_subcontractor_count} subcontractors span both divisions.`}
         />
         <div className="cross-counts">
@@ -447,11 +488,11 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
           number="06"
           eyebrow="Correspondence risk"
           question="What exposure appears in correspondence but not the cost system?"
-          title="Project communications contain material exposure not visible in the ledger"
+          title="Project communications contain cost and insights not visible in the ledger"
           conclusion={`${correspondenceEvents.toLocaleString()} extracted events identify ${currency(insights.headline.confirmed_unbooked_cost)} confirmed unbooked cost and ${currency(insights.headline.potential_downside_cost)} potential downside.`}
         />
         <div className="correspondence-summary">
-          {insights.correspondence_categories.map((item) => (
+          {visibleCorrespondenceCategories.map((item) => (
             <article key={item.category}>
               <span>{titleCase(item.category)}</span>
               <strong>{currency(item.amount)}</strong>
@@ -496,41 +537,21 @@ function InsightsPage({ onOpenJob }: { onOpenJob: (jobId: string) => void }) {
           number="07"
           eyebrow="Trust & controls"
           question="What additional risks, opportunities, and data issues stand out?"
-          title="All analytical reconciliations pass, with source-quality exceptions preserved"
-          conclusion={`${insights.analysis_quality_issue_count} analytical quality issues remain; ${totalQualityIssues.toLocaleString()} source observations are surfaced rather than silently discarded.`}
         />
-        <div className="quality-grid">
-          <div className="quality-severity">
-            {insights.quality_issues.map((item) => (
-              <div key={item.severity} className={`quality-${item.severity}`}>
-                <span>{titleCase(item.severity)}</span>
-                <strong>{item.issue_count.toLocaleString()}</strong>
-              </div>
-            ))}
-          </div>
-          <div className="reconciliation-list">
-            {insights.reconciliations.map((item) => {
-              const complete = item.passed_checks === item.total_checks;
-              return (
-                <div key={item.layer}>
-                  <span>{item.layer}</span>
-                  <div>
-                    <i
-                      style={{
-                        width: `${item.total_checks ? (item.passed_checks / item.total_checks) * 100 : 0}%`,
-                      }}
-                    />
-                  </div>
-                  <strong
-                    className={complete ? "positive-value" : "negative-value"}
-                  >
-                    {item.passed_checks} / {item.total_checks} passed
-                  </strong>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        {anomalyCards.length > 0 && (
+          <>
+            <h3 className="anomaly-title">Notable source anomalies</h3>
+            <div className="anomaly-grid">
+              {anomalyCards.map((item) => (
+                <article key={item.label}>
+                  <span>{item.label}</span>
+                  <strong>{item.value}</strong>
+                  <p>{item.detail}</p>
+                </article>
+              ))}
+            </div>
+          </>
+        )}
       </section>
     </div>
   );

@@ -3,6 +3,36 @@
 This repository contains a reproducible data pipeline and application slice for
 the FLINT construction portfolio case study.
 
+## Quick start from a fresh clone
+
+Install Python 3.11+, [uv](https://docs.astral.sh/uv/), and Node.js/npm. The
+supplied source extracts, reference maps, and annotation files are included in
+this repository; no data files need to be copied in separately. From PowerShell:
+
+```powershell
+git clone https://github.com/ashleykaring/FLINT-technical.git
+cd FLINT-technical
+uv sync --locked --dev
+$env:GEMINI_API_KEY = "your-key"
+uv run flint refresh
+uv run flint serve-api
+```
+
+Keep the API terminal open. In a second terminal, from the repository root:
+
+```powershell
+cd app
+npm.cmd ci
+npm.cmd run dev
+```
+
+Open `http://127.0.0.1:5173`. The first `refresh` needs a Gemini API key to
+extract the supplied correspondence; it makes model requests and may take
+several minutes. The job question box also needs that key. Without a key, run
+`uv run flint build` to inspect the deterministic pipeline and quality report,
+but the full dashboard requires the correspondence extraction and analysis marts.
+The generated DuckDB database is local and is not committed.
+
 ## Current milestone: reconciled analysis marts
 
 The ingestion pipeline loads every supplied source into a local DuckDB database
@@ -219,14 +249,13 @@ new analysis layer is completed. Useful automation controls include
 ## Run the dashboard
 
 The dashboard is a React/TypeScript application backed by a read-only FastAPI
-service. Build the analytical marts before starting either process.
+service. On a fresh clone, follow the quick start above to build all analytical
+marts. On a machine with a previously completed refresh, `uv run flint analyze`
+can rebuild just the final analysis layer without new model requests.
 
 In the first terminal:
 
 ```powershell
-$env:GEMINI_API_KEY = "your-key"
-$env:GEMINI_QA_MODEL = "gemini-3.5-flash-lite"
-uv run flint analyze
 uv run flint serve-api
 ```
 
@@ -238,7 +267,7 @@ In a second terminal:
 
 ```powershell
 cd app
-npm.cmd install
+npm.cmd ci
 npm.cmd run dev
 ```
 

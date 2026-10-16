@@ -29,6 +29,7 @@ from pipeline.api.schemas import (
     JobSummary,
     MonthlyCostPoint,
     ParetoPoint,
+    PortfolioAnomalies,
     PortfolioDashboard,
     PortfolioInsights,
     PortfolioKpis,
@@ -61,6 +62,7 @@ REQUIRED_TABLES = {
     "mart_equipment_economics",
     "mart_job_dashboard",
     "mart_job_correspondence_exposure",
+    "mart_job_financial",
     "mart_monthly_cost_trend",
     "mart_subcontractor_combined_exposure",
     "model_analysis_reconciliation",
@@ -1232,6 +1234,78 @@ def _quality_insights(
     )
 
 
+def _portfolio_anomalies(connection: duckdb.DuckDBPyConnection) -> PortfolioAnomalies:
+    row = connection.execute(
+        """
+        WITH ledger AS (
+            SELECT
+                count(*) FILTER (WHERE is_unmapped_cost_code)
+                    AS unmapped_ledger_posting_count,
+                list_sort(list(DISTINCT erp_cost_code) FILTER (
+                    WHERE is_unmapped_cost_code AND erp_cost_code IS NOT NULL
+                )) AS unmapped_ledger_cost_codes,
+                coalesce(sum(duplicate_source_count - 1) FILTER (
+                    WHERE was_deduplicated
+                ), 0) AS duplicate_ledger_rows_excluded,
+                coalesce(sum(amount * (duplicate_source_count - 1)) FILTER (
+                    WHERE was_deduplicated
+                ), 0) AS duplicate_ledger_amount_excluded,
+                count(*) FILTER (WHERE transaction_type = 'ADJUSTMENT')
+                    AS adjustment_transaction_count,
+                coalesce(sum(amount) FILTER (
+                    WHERE transaction_type = 'ADJUSTMENT'
+                ), 0) AS net_adjustment_amount,
+                count(*) FILTER (WHERE is_missing_job_id)
+                    AS missing_job_id_posting_count
+            FROM fact_cost_transaction
+        ),
+        jobs AS (
+            SELECT
+                list(job_id ORDER BY job_id) FILTER (WHERE is_missing_estimate)
+                    AS missing_budget_job_ids,
+                count(*) FILTER (WHERE estimate_drift_pct >= 0.10)
+                    AS estimate_drift_job_count
+            FROM mart_job_financial
+        ),
+        schedule AS (
+            SELECT
+                count(*) FILTER (WHERE is_actual_finish_before_start)
+                    AS reversed_schedule_activity_count,
+                count(DISTINCT job_key) FILTER (
+                    WHERE is_actual_finish_before_start
+                ) AS reversed_schedule_job_count
+            FROM fact_schedule_activity
+        )
+        SELECT
+            ledger.unmapped_ledger_posting_count,
+            ledger.unmapped_ledger_cost_codes,
+            jobs.missing_budget_job_ids,
+            ledger.duplicate_ledger_rows_excluded,
+            ledger.duplicate_ledger_amount_excluded,
+            ledger.adjustment_transaction_count,
+            ledger.net_adjustment_amount,
+            jobs.estimate_drift_job_count,
+            schedule.reversed_schedule_activity_count,
+            schedule.reversed_schedule_job_count,
+            ledger.missing_job_id_posting_count
+        FROM ledger, jobs, schedule
+        """
+    ).fetchone()
+    return PortfolioAnomalies(
+        unmapped_ledger_posting_count=row[0],
+        unmapped_ledger_cost_codes=list(row[1] or []),
+        missing_budget_job_ids=list(row[2] or []),
+        duplicate_ledger_rows_excluded=row[3],
+        duplicate_ledger_amount_excluded=_number(row[4]),
+        adjustment_transaction_count=row[5],
+        net_adjustment_amount=_number(row[6]),
+        estimate_drift_job_count=row[7],
+        reversed_schedule_activity_count=row[8],
+        reversed_schedule_job_count=row[9],
+        missing_job_id_posting_count=row[10],
+    )
+
+
 def load_portfolio_insights(settings: Settings) -> PortfolioInsights:
     if not settings.database_path.is_file():
         raise DashboardDataError(
@@ -1267,6 +1341,7 @@ def load_portfolio_insights(settings: Settings) -> PortfolioInsights:
             quality_issues=quality,
             reconciliations=reconciliations,
             analysis_quality_issue_count=analysis_issues,
+            anomalies=_portfolio_anomalies(connection),
         )
     except duckdb.Error as exc:
         raise DashboardDataError(f"could not query portfolio insights: {exc}") from exc

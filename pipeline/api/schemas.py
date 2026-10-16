@@ -334,6 +334,20 @@ class ReconciliationInsight(BaseModel):
     total_checks: int
 
 
+class PortfolioAnomalies(BaseModel):
+    unmapped_ledger_posting_count: int
+    unmapped_ledger_cost_codes: list[str]
+    missing_budget_job_ids: list[str]
+    duplicate_ledger_rows_excluded: int
+    duplicate_ledger_amount_excluded: float
+    adjustment_transaction_count: int
+    net_adjustment_amount: float
+    estimate_drift_job_count: int
+    reversed_schedule_activity_count: int
+    reversed_schedule_job_count: int
+    missing_job_id_posting_count: int
+
+
 class PortfolioInsights(BaseModel):
     headline: InsightsHeadline
     divisions: list[DivisionInsight]
@@ -350,6 +364,7 @@ class PortfolioInsights(BaseModel):
     quality_issues: list[QualityInsight]
     reconciliations: list[ReconciliationInsight]
     analysis_quality_issue_count: int
+    anomalies: PortfolioAnomalies
 
 
 class EquipmentFilters(BaseModel):

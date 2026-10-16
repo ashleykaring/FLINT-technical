@@ -70,5 +70,20 @@ def analysis_settings(modeled_settings: Settings) -> Settings:
                  NULL, 'unknown', 'disputed')
             """
         )
+        connection.execute(
+            "ALTER TABLE fact_correspondence_event_current ADD COLUMN evidence_text VARCHAR"
+        )
+        connection.execute(
+            "UPDATE fact_correspondence_event_current "
+            "SET evidence_text = 'Synthetic fixture evidence'"
+        )
+        # API tests use a small synthetic correspondence fact instead of running
+        # the external extraction provider, so provide its reconciliation gate.
+        connection.execute(
+            """
+            CREATE OR REPLACE TABLE model_correspondence_reconciliation AS
+            SELECT 'synthetic_correspondence_fixture' AS check_name, true AS passed
+            """
+        )
     build_analysis(modeled_settings)
     return modeled_settings
